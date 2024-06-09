@@ -1,0 +1,19 @@
+1. Tokenization
+
+    Definition: The process of breaking down a text into smaller units called tokens (words, phrases, or symbols).
+    Example: "Natural Language Processing" -> ["Natural", "Language", "Processing"]
+
+2. Stop Words
+
+    Definition: Commonly used words in a language that are often removed during preprocessing because they do not carry significant meaning.
+    Example: "is", "and", "the"
+
+3. Stemming
+
+    Definition: The process of reducing words to their base or root form by removing suffixes.
+    Example: "running" -> "run"
+
+4. Lemmatization
+
+    Definition: Similar to stemming, but it reduces words to their base or dictionary form (lemma), considering the context.
+    Example: "better" -> "good", "running" -> "run"
