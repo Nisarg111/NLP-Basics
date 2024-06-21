@@ -29,5 +29,12 @@
     Does not give meaningful result i.e if we two sentences one sentence has not and other does not then the model will only show difference of vector.
     Working :- Create the vocabulary and use vocabulary as feature and if the word is present in document represent it with 1 else 0.
 
-7. 
+7. N Gram
+    To get meaning full results from BOW, we use NGram
+    N gram works by making combination of n words to create much difference between sentences.
+    Count Vectorizer is used for N gram implimentation. Its parameter are as follows:
+    Max_feature specify the top n words used in the dataset
+    binary means if same word is repeated in same sentence it will represented by 1, if false it will show the count of word
+    ngram specified the combination of words to created first argument is least no. of word combination and second is max no. of words to be extracted
+    From the given example, it will create ngrams of aleast of two words and max of 10 words
     
