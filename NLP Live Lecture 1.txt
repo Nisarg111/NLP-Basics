@@ -27,5 +27,7 @@
     BOW are used to represent sentences in a vector form.
     It is simple to implement.
     Does not give meaningful result i.e if we two sentences one sentence has not and other does not then the model will only show difference of vector.
+    Working :- Create the vocabulary and use vocabulary as feature and if the word is present in document represent it with 1 else 0.
+
 7. 
     
