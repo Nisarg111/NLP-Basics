@@ -89,3 +89,7 @@ Disadvantage:
     term used for representation of words in text analysis, it is representation of words in real valued vector form that encodes the meaning of word and similar words are 
     closer to each other in terms of plan representation(Graph).
 
+    Two Types of word Embedding technique:
+    1. Count or Frequency based. Example :- BOW, OHE, TFIDF
+    2. Deep learning trained model. Example:- Word2Vec:- CBOW(Continous Bag of Words), Skipgram
+
