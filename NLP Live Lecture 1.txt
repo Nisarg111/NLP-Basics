@@ -121,3 +121,14 @@ Disadvantage:
 
     More Detailed Answer: https://chatgpt.com/share/1e247421-80c5-470b-99dd-bc0e580da2a0
 
+
+11. SkipGram:
+    Skip-gram is used to predict the context word for a given target word.
+    Good with large dataset.
+
+    Working:
+    Same as CBOW, the key difference will be the ouput of CBOW becomes input for Skipgram and input of CBOW becomes output of Skipgram.
+    Or to put it simple:
+    It will a take a word as input and will generate words related to the input.
+    
+
