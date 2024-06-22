@@ -84,3 +84,8 @@ Disadvantage:
 
 1. Out of vocabulary problem.
 
+
+9. Word Embedding:
+    term used for representation of words in text analysis, it is representation of words in real valued vector form that encodes the meaning of word and similar words are 
+    closer to each other in terms of plan representation(Graph).
+
