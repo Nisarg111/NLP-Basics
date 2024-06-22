@@ -93,7 +93,8 @@ Disadvantage:
     2. Deep learning trained model. Example:- Word2Vec:- CBOW(Continous Bag of Words), Skipgram
 
 
-10. CBOW(Continous Bag Of Words)
+10. CBOW(Continous Bag Of Words):
+    CBOW is a neural network-based algorithm that predicts a target word given its surrounding context words.
     CBOW Working:
     Let's take for Example a document: I am learning Deep Learning.
     And Suppose we are taking the window size of 3.
