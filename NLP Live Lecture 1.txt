@@ -95,6 +95,7 @@ Disadvantage:
 
 10. CBOW(Continous Bag Of Words):
     CBOW is a neural network-based algorithm that predicts a target word given its surrounding context words.
+    Works well with small dataset.
     CBOW Working:
     Let's take for Example a document: I am learning Deep Learning.
     And Suppose we are taking the window size of 3.
@@ -103,10 +104,10 @@ Disadvantage:
     Softmax function is used.
     Middle word of the sentence will be considered output.
     Except the middle word other will act as Input.
-    1. I am learning, Here am is the Output.
+    1. I am learning, Here 'am' is the Output.
     So, here we will the first we will apply one hot encoding to the sentence.
-    Then as there are 2 words as input we will apply 2 vectors to the hidden layer.
-    Here wieght applied for each node will equal to 5*2 where 5 is total no. of words (vocabulary) and 2 is the size of input.
+    Then as there are 2 words as input we will apply 2 vectors to the hidden layer as input.
+    Here wieght applied for each node will equal to 5*3 where 5 is total no. of words (vocabulary) and 3 is the window size.
     The hidden layer is of size equal to window size for this example.
     A typical range for word embeddings is between 50 and 300 dimensions for small to moderate-sized datasets. For larger datasets, embeddings can go up to 1000 dimensions      or more.
     The output layer will be of size vocabulary i.e total no, of nodes in output layer is equal to total no. of words.
@@ -115,8 +116,8 @@ Disadvantage:
     Intution:
     Here, each word is considered as a feature for example lets take words Apple, elephant 
     And we will create CBOW for this 2 words based on features is_fruit or is_animal
-    So for apple vector will be[1, 0.01] this shows the relation with fruit and animal 1 represents fully related and 0.01 not related
-    Therefore for above example, we will be generating thi types of vectores and compare them with output and will loss function to it.
+    So for apple, vector will be[1, 0.01] this shows the relation with fruit and animal 1 represents fully related and 0.01 not related
+    Therefore for above example, we will be generating this types of vectores and compare them with output and will apply loss function to it.
 
     More Detailed Answer: https://chatgpt.com/share/1e247421-80c5-470b-99dd-bc0e580da2a0
 
