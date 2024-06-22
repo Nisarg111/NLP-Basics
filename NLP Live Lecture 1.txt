@@ -92,6 +92,11 @@ Disadvantage:
     1. Count or Frequency based. Example :- BOW, OHE, TFIDF
     2. Deep learning trained model. Example:- Word2Vec:- CBOW(Continous Bag of Words), Skipgram
 
+    Advantages:
+    1. Does not generate Sparse Matrix, generates Dense Matrix.
+    2. Out off vocabulary problem solved as new feature/word can be represented with 0.
+    3. Semantic Information is getting captured.
+
 
 10. CBOW(Continous Bag Of Words):
     CBOW is a neural network-based algorithm that predicts a target word given its surrounding context words.
