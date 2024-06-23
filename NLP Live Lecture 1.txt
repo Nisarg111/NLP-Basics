@@ -146,6 +146,8 @@ Disadvantage:
     Or to put it simple:
     It will a take a word as input and will generate words related to the input.
 
+    Detailed Answers: https://chatgpt.com/share/51b9bae5-e392-4576-9207-68bedfb70b3a
+
 12. Average Word2Vec:
     Average Word2Vec is used in deep learning beacause Word2Vec just converts a word to vector but in real time analysis we have to analyze sentences.
     So solve this we use Average Word2Vec.
