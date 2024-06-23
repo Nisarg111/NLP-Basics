@@ -2,8 +2,8 @@ Working with NLP
 
 1. Preprocessing of Data
 2. Train and Test Split before modelling to prevent any data leakage
-3. Model training
-4.Output
+3. BOW or TFIDF
+4. Model training
 
 
 
