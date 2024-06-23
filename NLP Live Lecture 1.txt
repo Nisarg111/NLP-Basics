@@ -145,5 +145,6 @@ Disadvantage:
     Example: 3 verctors A,B,C output D
     i in range(0,len(A)):
         (Ai+Bi+Ci)/3 = Di
-    
+
+13. To understand Working of BOW with Example link: https://chatgpt.com/share/6d98d575-3635-4acc-8cc2-1a565ce05f4a
 
