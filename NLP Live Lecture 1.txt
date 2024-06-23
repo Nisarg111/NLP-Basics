@@ -135,5 +135,15 @@ Disadvantage:
     Same as CBOW, the key difference will be the ouput of CBOW becomes input for Skipgram and input of CBOW becomes output of Skipgram.
     Or to put it simple:
     It will a take a word as input and will generate words related to the input.
+
+12. Average Word2Vec:
+    Average Word2Vec is used in deep learning beacause Word2Vec just converts a word to vector but in real time analysis we have to analyze sentences.
+    So solve this we use Average Word2Vec.
+    Working:
+    We obtain the word2vec of each word.
+    Then for each row of each vector we calculate average and store it in a new vector.
+    Example: 3 verctors A,B,C output D
+    i in range(0,len(A)):
+        (Ai+Bi+Ci)/3 = Di
     
 
