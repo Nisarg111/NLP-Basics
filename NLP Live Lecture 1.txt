@@ -1,3 +1,13 @@
+Working with NLP
+
+1. Preprocessing of Data
+2. Train and Test Split before modelling to prevent any data leakage
+3. Model training
+4.Output
+
+
+
+
 1. Tokenization
 
     Definition: The process of breaking down a text into smaller units called tokens (words, phrases, or symbols).
