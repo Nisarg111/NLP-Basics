@@ -160,3 +160,16 @@ Disadvantage:
 
 13. To understand Working of BOW with Example link: https://chatgpt.com/share/6d98d575-3635-4acc-8cc2-1a565ce05f4a
 
+14. Docker:
+
+    Docker is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that       have everything the software needs to run including libraries, system tools, code, and runtime.
+
+15. Docker Image:
+    1. It is the package containing all the image files of the required dependencies.
+    2. It is layered architecture with os image as a base example linux.
+    3. For understanding purpose consider it as program containing all the necessary information to run the application.
+
+16. Container:
+    1. Container is created when docker image file is executed.
+    2. Container can be considered as the environment having all the necessary dependencies to run the application.
+    3. For understanding purpose consider it as a process.
