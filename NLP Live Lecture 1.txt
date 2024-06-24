@@ -188,3 +188,7 @@ Disadvantage:
         Because of this large in size.
         Slower compared to docker.
         Can be installed on any OS.
+
+18. Docker Commands:
+    docker pull docker/img_name: Used to download/pull specified image.
+    docker images: To check all the pulled imgaes
