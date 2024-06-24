@@ -190,5 +190,11 @@ Disadvantage:
         Can be installed on any OS.
 
 18. Docker Commands:
-    docker pull docker/img_name: Used to download/pull specified image.
-    docker images: To check all the pulled imgaes
+    1.docker pull docker/img_name: Used to download/pull specified image.
+    2.docker images: To check all the pulled imgaes.
+    3.docker run -d -p port:port, port:port is host to container mapping, -d means detached, -p means port mapping: This command is used to run container.
+    4.docker ps: to display information like container if, status, port all the running containers. And if it is running it will show the port no. on which it is running          0.0.0.0:80 means it is running on local
+    host, 127.0.0.1:80, using this it can be accessed on browswer.
+    5.docker stop container_id: to stop the container.
+    6.docker image rm -f container_id: to delete the image
+    
