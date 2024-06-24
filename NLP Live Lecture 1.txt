@@ -173,3 +173,18 @@ Disadvantage:
     1. Container is created when docker image file is executed.
     2. Container can be considered as the environment having all the necessary dependencies to run the application.
     3. For understanding purpose consider it as a process.
+
+17. Docker And Virtual Machine:
+    Docker: 
+        Communicates with the host OS kernel so it doesn't need its own OS kernel.
+        Only needs application layer not kernel level to communicate with hardware.
+        Does not directly communicates with hardware.
+        Because of this small in size.
+        Starts and runs faster.
+        Has compatibility issues for example a linux docker image will not work on windows version less than win 10 because OS kernel of win <10 does not support linux.
+    Virtual Machine:
+        Directly communicates with the hardware.
+        Contains its own application layer and os kernel layer.
+        Because of this large in size.
+        Slower compared to docker.
+        Can be installed on any OS.
