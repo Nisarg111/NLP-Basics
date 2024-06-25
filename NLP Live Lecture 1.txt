@@ -198,6 +198,7 @@ Disadvantage:
     5.docker stop container_id: to stop the container.
     6.docker image rm -f container_id: to delete the image
     7. docker build -t name . // This command creates the image name is the name of image and . means it finds the DockerFile in this folder
+    8. docker tag old-name new-name //Used to change the name of the image
 
 19. Creating A Docker Image:
     FROM python:3.8-alpine //From specifies the base layer or the base os 
