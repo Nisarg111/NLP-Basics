@@ -197,4 +197,12 @@ Disadvantage:
     host, 127.0.0.1:80, using this it can be accessed on browswer.
     5.docker stop container_id: to stop the container.
     6.docker image rm -f container_id: to delete the image
+
+19. Creating A Docker Image:
+    FROM python:3.8-alpine //From specifies the base layer or the base os 
+    COPY . /app //This command '.' means from this current directory copy all files to '/app'
+    WORKDIR /app 'This command changes the working directory to the current directory'
+    RUN pip install -r requirements.txt // 'This command installs all the libraries specified in the requirements.txt file'
+    CMD python app.py // This command launches the application
+
     
