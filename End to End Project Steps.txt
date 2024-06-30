@@ -10,3 +10,7 @@
 9) Then create a src folder which contains an __init__.py
   a) The src directory is often used in software projects to organize source code. Placing your code in a src directory can help clarify the structure of your project,            making it easier to understand and navigate.
   b) The __init__.py file is used to mark a directory as a Python package. When a directory contains an __init__.py file, it tells Python that the directory should be             treated as a package, allowing you to import modules from that directory.
+  c) The -e . syntax in a requirements.txt file is used to install a package in "editable" mode. This is typically used during development to allow for changes to the source      code to be immediately reflected without needing to reinstall the package.
+     Explanation
+     -e: This stands for "editable" mode. When you install a package in editable mode, any changes you make to the source code will be directly reflected in the package            without needing to reinstall it.
+      .: This refers to the current directory, which is usually the root of your project. By using -e ., you are indicating that the package you want to install is located         in the current directory.
