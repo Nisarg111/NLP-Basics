@@ -4,4 +4,5 @@
 4) Create a README.md file in local system.
 5) Then initialize the the project in the local system, steps written in github.
 6) If permission denied error create a ssh key in local system and add it to github by going to setting-> ssh key -> add key.
-7)
+7) create a gitignore file in github and choose python template and commit changes.
+8) Create setup.py and requirements.txt
