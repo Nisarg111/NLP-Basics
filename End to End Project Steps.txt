@@ -6,3 +6,4 @@
 6) If permission denied error create a ssh key in local system and add it to github by going to setting-> ssh key -> add key.
 7) create a gitignore file in github and choose python template and commit changes.
 8) Create setup.py and requirements.txt
+  a) setup.py is used to convert project into package which can then be published and installed on any device.
