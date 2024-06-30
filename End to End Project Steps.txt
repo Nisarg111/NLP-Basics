@@ -1,1 +1,7 @@
-
+1) Create a empty folder in local system and a repository in github and in local system navigate to it use anaconda prompt from anaconda promte open vscode.
+2) Then in vscode create a virtual environment using conda create ip venv python==version -y.
+3) Activate venv using conda activate venv.
+4) Create a README.md file in local system.
+5) Then initialize the the project in the local system, steps written in github.
+6) If permission denied error create a ssh key in local system and add it to github by going to setting-> ssh key -> add key.
+7)
