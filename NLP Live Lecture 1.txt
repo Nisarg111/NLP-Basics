@@ -6,6 +6,7 @@ Working with NLP
 4. Model training
 
 
+Perceptron is single layered  neural network used to solve binary classification problem.
 
 
 1. Tokenization
