@@ -232,6 +232,8 @@ Disadvantage:
     -1 to 1 centered to 0. Because of this weight updation will not be that good.
     Zero centered means the mean is zero.
 
+    Softmax activation function is used for Multiclass classification problem
+
     In Relu Dead neuron may produce.
     To solve Dead neuron/Relu problem Parametric Relu and Leaky Relu is Used.
     Parametric Relu = max(const * x, x) this way we will never get 0.
