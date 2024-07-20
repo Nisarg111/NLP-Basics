@@ -233,6 +233,9 @@ Disadvantage:
     Zero centered means the mean is zero.
 
     In Relu Dead neuron may produce.
+    To solve Dead neuron/Relu problem Parametric Relu and Leaky Relu is Used.
+    Parametric Relu = max(const * x, x) this way we will never get 0.
+    Leaky Relu = max(0.01*x, x)
 
 22. Activation Function Return values:
     1. Sigmoid = 0 to 1  derivative = 0 to 0.25
