@@ -233,6 +233,7 @@ Disadvantage:
     Zero centered means the mean is zero.
 
     Softmax activation function is used for Multiclass classification problem
+    Softmax formular = e^yi/Sum of k = 0 to n for e^yk
 
     In Relu Dead neuron may produce.
     To solve Dead neuron/Relu problem Parametric Relu and Leaky Relu is Used.
