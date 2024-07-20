@@ -226,3 +226,5 @@ Disadvantage:
     Derivative of a Sigmoid Function is always between 0 to 0.25.
 
     Now when we calculate weight of the beginnig point we have muliply values near 0.25 many times which in terms becomes insignicant.
+    Sigmoid activation function can be used for small neural networks.
+
