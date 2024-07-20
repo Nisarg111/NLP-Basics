@@ -213,4 +213,16 @@ Disadvantage:
     1. Login to docker in cmd
     2. Rename your image to docker-usrname/img-name
     3. docker push full-img-name
+
+
+21. Vanishing Gradient Problem:
+
+    It occurs due to sigmoid activation function.
+    Vanishing Gradient Problem occurs when in back propagation the weight updation is so small that it becomes insiginicant. (Wnew is approx of W old)
     
+    Weight Updation Formula = W(new) = W(old) - Learning Rate(n of) (derivative of Loss/derivative of W(old))
+    Now the derivative of a weight is dependent on activation function and 
+
+    Derivative of a Sigmoid Function is always between 0 to 0.25.
+
+    Now when we calculate weight of the beginnig point we have muliply values near 0.25 many times which in terms becomes insignicant.
