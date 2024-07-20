@@ -250,7 +250,7 @@ Disadvantage:
     Loss Funtion is a function that calculates square(y-yhat) for each record in dataset and performs backpropagation for each record.
     Cost Function is a a function calculates (1/n)* Sum of yi - yihat where 0<=i<=n. inshort for multiple records first calculation is done and then back propagation is         done.
 
-    Types:
+    Types in Regression:
     1) Mean Squared Error:
         Cost Function = (1/n)* Sum of yi - yihat where 0<=i<=n
 
@@ -267,6 +267,11 @@ Disadvantage:
         Combination of MSE and MAE
         When error is less than a specified hyper parameter use MSE else use MAE
 
+    Types in Classification (Cross Entropy):
+
+    1)Binary cross entropy uses sigmoid.
+    2)Categorical Cross Entropy for multiclass regression uses softmax function which returns propability of all the classes Requires One Hot Encoding.
+    3)Sparse Cross Entropy similar to categorical but instead of returning the probability of all classes returns the index of class with the highest probability.
         
 
 
