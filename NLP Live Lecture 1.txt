@@ -250,4 +250,23 @@ Disadvantage:
     Loss Funtion is a function that calculates square(y-yhat) for each record in dataset and performs backpropagation for each record.
     Cost Function is a a function calculates (1/n)* Sum of yi - yihat where 0<=i<=n. inshort for multiple records first calculation is done and then back propagation is         done.
 
+    Types:
+    1) Mean Squared Error:
+        Cost Function = (1/n)* Sum of yi - yihat where 0<=i<=n
+
+        Do not use when dataset contains outliers.
+
+    2) Mean Absolute Error:
+        
+        Function = |y-yhat|
+
+        Use when dataset have outliers because it will not affect the calculation of classification line in classification problem.
+        Creates a sub gradient which instead of curve like gradient discent it creates a V.
+
+    3) Huber Loss:
+        Combination of MSE and MAE
+        When error is less than a specified hyper parameter use MSE else use MAE
+
+        
+
 
