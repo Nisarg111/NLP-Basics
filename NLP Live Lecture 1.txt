@@ -230,4 +230,5 @@ Disadvantage:
 
     Sigmoid is not zero centered it is centered at 0.5 which is not good because after we apply stanadard scalar to inputs there value will be between
     -1 to 1 centered to 0. Because of this weight updation will not be that good.
+    Zero centered means the mean is zero.
 
