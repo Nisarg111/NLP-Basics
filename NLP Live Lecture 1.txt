@@ -284,8 +284,10 @@ Disadvantage:
     1)Gradient Descent
     2)Stochastic Gradient Descent
     3)Mini Batch SGD
-    4)Adagard and RMSPROP
-    5)Adam Optimizer
+    4)SGD with momentum
+    5)Adagard and RMSPROP
+    6)Adam Optimizer
+    
         
 
 
