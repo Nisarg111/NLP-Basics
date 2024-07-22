@@ -275,8 +275,16 @@ Disadvantage:
     2)Categorical Cross Entropy for multiclass regression uses softmax function which returns propability of all the classes Requires One Hot Encoding.
     3)Sparse Cross Entropy similar to categorical but instead of returning the probability of all classes returns the index of class with the highest probability.
 
+24. Epochs and Iteration:
+    
+    Epochs: An epoch is one complete pass through the entire training dataset. It means that every unique sample in the training dataset has been used once to update the        model's weights. When training a model, multiple epochs are usually run to ensure that the model learns the patterns in the data effectively.
+    For example, if you have a dataset with 1,000 samples and you run training for 10 epochs, it means that the model will go through the entire dataset 10 times.
 
-24. Optimizers:
+    Iteration: An iteration refers to a single update of the model's parameters. The number of iterations depends on the batch size and the size of the dataset. During          each iteration, a batch of samples is processed, and the model weights are updated based on the gradient computed from that batch.
+    For example, if you have a dataset with 1,000 samples and a batch size of 100, then it will take 10 iterations to complete 1 epoch.
+
+
+25. Optimizers:
 
     Optimizers are the methods or algorithms used to update the weights and baisis of the model to minize the loss.
 
@@ -300,12 +308,21 @@ Disadvantage:
       1) Time Complexity- Requires more time.
       2) Convergence is slow.
       3) Introduces noise.(Doest not have smooth curve in gradient decent curve while solving)
-    
-25. Epochs and Iteration:
-    
-    Epochs: An epoch is one complete pass through the entire training dataset. It means that every unique sample in the training dataset has been used once to update the        model's weights. When training a model, multiple epochs are usually run to ensure that the model learns the patterns in the data effectively.
-    For example, if you have a dataset with 1,000 samples and you run training for 10 epochs, it means that the model will go through the entire dataset 10 times.
 
-    Iteration: An iteration refers to a single update of the model's parameters. The number of iterations depends on the batch size and the size of the dataset. During          each iteration, a batch of samples is processed, and the model weights are updated based on the gradient computed from that batch.
-    For example, if you have a dataset with 1,000 samples and a batch size of 100, then it will take 10 iterations to complete 1 epoch.
+    3) Mini Batch SGD:
+       Here instead of one data point multiple data points are taken at once in model and cost function is calculated and the weights are optimized.
+       Advantages: Improved Convergence Speed.
+       Less time required and Efficient use of resources.
+
+       Disadvantages: Noise Still Exists.
+
+    4)SGD with momentum:
+      It uses the concept of Exponential Weighted Average which stats that we use time and values to smoothening the gradient descent curve.
+      The formula to calculate weight is Wt = Wt-1 - Learning rate of(derivative of Loss/ derivative Wt-1)
+      Suppose for time t1,t2,t3,t4 we have values for a weigth a1,a2,a3,a4 respectively.    
+      Vt1= a1 (Value of t1 is a1)
+      So to smoothen the curve we will use Smoothing function which is Vt = Beta* Vt-1 + (1- Beta)*at
+      where Beta controls the smoothening and it has value between 0 and 1. The smoothening more dependent on previous value.
+      Example Beta = 0.95, V2 = (0.95 * V1) + (0.05*a2)
+
 
