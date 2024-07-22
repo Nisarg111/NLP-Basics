@@ -317,6 +317,7 @@ Disadvantage:
        Disadvantages: Noise Still Exists.
 
     4)SGD with momentum:
+      Here it improves the Mini Batch SGD by smoothing the gradient descent curve, which improves convergence speed.
       It uses the concept of Exponential Weighted Average which stats that we use time and values to smoothening the gradient descent curve.
       The formula to calculate weight is Wt = Wt-1 - Learning rate of(derivative of Loss/ derivative Wt-1)
       Suppose for time t1,t2,t3,t4 we have values for a weigth a1,a2,a3,a4 respectively.    
@@ -324,5 +325,12 @@ Disadvantage:
       So to smoothen the curve we will use Smoothing function which is Vt = Beta* Vt-1 + (1- Beta)*at
       where Beta controls the smoothening and it has value between 0 and 1. The smoothening more dependent on previous value.
       Example Beta = 0.95, V2 = (0.95 * V1) + (0.05*a2)
+
+    5)AdaGrad (Adaptive Gradient Descent)
+      Before this the learning rate was static, here learning rate is dynamically changed the learning rate is decreased as it reaches near to the global minimum.
+      n' represents dynamic learning rate.
+      n' = (n/root of(Alpha t + epsilon) 
+      here, epsilon is very small value so dinominator does not become 0.
+      Alpha t = Sum of i =1 to t(Derivative of loss/derivative of Wt)
 
 
