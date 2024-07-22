@@ -288,6 +288,11 @@ Disadvantage:
     5)Adagard and RMSPROP
     6)Adam Optimizer
     
-        
+25. Epochs and Iteration:
+    
+    Epochs: An epoch is one complete pass through the entire training dataset. It means that every unique sample in the training dataset has been used once to update the        model's weights. When training a model, multiple epochs are usually run to ensure that the model learns the patterns in the data effectively.
+    For example, if you have a dataset with 1,000 samples and you run training for 10 epochs, it means that the model will go through the entire dataset 10 times.
 
+    Iteration: An iteration refers to a single update of the model's parameters. The number of iterations depends on the batch size and the size of the dataset. During          each iteration, a batch of samples is processed, and the model weights are updated based on the gradient computed from that batch.
+    For example, if you have a dataset with 1,000 samples and a batch size of 100, then it will take 10 iterations to complete 1 epoch.
 
