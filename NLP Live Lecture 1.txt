@@ -287,6 +287,19 @@ Disadvantage:
     4)SGD with momentum
     5)Adagard and RMSPROP
     6)Adam Optimizer
+
+
+    1) Gradient Descent works by taking all the data points at once and uses cost function. If we have 100 data points it will pass all 100 points to model, compute the            cost and then apply optimization method.
+
+       It is resource intensive as it may require large amount of ram for large amount of data.
+
+    2)Stochastic Gradient Descent: Here we will take only one data point at a time to train the model and optimizes the weight and bais.
+
+      Solves the problem of resource as requires less resources.
+      Distadvantages:
+      1) Time Complexity- Requires more time.
+      2) Convergence is slow.
+      3) Introduces noise.(Doest not have smooth curve in gradient decent curve while solving)
     
 25. Epochs and Iteration:
     
