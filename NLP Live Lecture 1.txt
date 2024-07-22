@@ -327,10 +327,24 @@ Disadvantage:
       Example Beta = 0.95, V2 = (0.95 * V1) + (0.05*a2)
 
     5)AdaGrad (Adaptive Gradient Descent)
-      Before this the learning rate was static, here learning rate is dynamically changed the learning rate is decreased as it reaches near to the global minimum.
+      Before this the learning rate was static, here learning rate is dynamically changed the learning rate is high at the beginning and decreased as it reaches near to the       global minimum.
       n' represents dynamic learning rate.
       n' = (n/root of(Alpha t + epsilon) 
+      Alpha t is inversely propertional to n'
       here, epsilon is very small value so dinominator does not become 0.
-      Alpha t = Sum of i =1 to t(Derivative of loss/derivative of Wt)
+      Alpha t = Sum of i =1 to t((Derivative of loss/derivative of Wt)^2)
+      Disadvantage is learning rate may became equivalent to 0, when we have deep neural network i.e. many hidden layers and alpha t becomes very high.
+
+    6)Adadelta and RMSPROP:
+      Here to overcome the problem of large aipha t we use Exponential Weighted Average, where
+      n' = n/(rootof(Sdwt+e)
+      here, Sdwt is =  Beta* Sdwt-1 + (1-Beta) * Sum of i =1 to t((Derivative of loss/derivative of Wt)^2) which alpha t 
+
+    7) Adam:
+       Best optimizer combines SGD with momentum and RMSPROP
+       Formula Wt = Wt-1 - n' Vdw(SGD with momentum) and n' = n/(rootof(Sdwt+e)
+       here, Sdwt is =  Beta* Sdwt-1 + (1-Beta) * Sum of i =1 to t((Derivative of loss/derivative of Wt)^2) which alpha t
+
+       Same for Bais Bt = Bt-1 - n'Vdb
 
 
