@@ -18,3 +18,7 @@ Example when use google translate if have to process word sequentially to genera
 Difference Between ANN and Simple RNN:
 ANN does not retain the information and all the inputs are passed in one timestamp i.e in one go.
 In Simple RNN, its different, Every node in hidden layer contains a self loop or feedback loop and loop to other nodes in the hidden layer. When One node generates it output, this output is passed to itself and to other nodes. By doing this Simple RNN can retain previous information. Also inputs are passed once every time stamp.
+
+Problems in Simple RNN:
+1) When sentences has many words and has dependencies on prevous words it can not capture it well.
+2) Also Vanishing gradiend problem occurs when no. of words is large as we have to calculate derivate for all and which may lead to weight updation at t1 to be near zero which means it does not contribute much in computation
