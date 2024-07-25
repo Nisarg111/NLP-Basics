@@ -1,3 +1,6 @@
 1. Corpus means a paragraph.
 2. Document can be defined individual data points in a datasets or to be put simply we can say sentences.
 3. Vocabulary no of unique words found in corpus.
+
+Audio Classification Project:
+IPython.display is used to display audio file and it takes file name and sample rate as arguments.
