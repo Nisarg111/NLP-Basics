@@ -17,4 +17,4 @@ Example when use google translate if have to process word sequentially to genera
 
 Difference Between ANN and Simple RNN:
 ANN does not retain the information and all the inputs are passed in one timestamp i.e in one go.
-In Simple RNN, its different, Every node in hidden layer contains a self loop and loop to other nodes in the hidden layer. When One node generates it output, this output is passed to itself and to other nodes. By doing this Simple RNN can retain previous information. Also inputs are passed once every time stamp.
+In Simple RNN, its different, Every node in hidden layer contains a self loop or feedback loop and loop to other nodes in the hidden layer. When One node generates it output, this output is passed to itself and to other nodes. By doing this Simple RNN can retain previous information. Also inputs are passed once every time stamp.
