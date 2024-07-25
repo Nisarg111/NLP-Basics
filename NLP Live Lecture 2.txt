@@ -13,3 +13,8 @@ Data are the wavepoints which can represented as an array of interger and it is 
 ANN Vs RNN
 ANN cannot handle sequential data where position of an element is important for example if we pass it a sentence we convert it into a vector using BOW,Word2Vec which causes the information loss about the each words position.
 Example when use google translate if have to process word sequentially to generate valid translations.
+
+
+Difference Between ANN and Simple RNN:
+ANN does not retain the information and all the inputs are passed in one timestamp i.e in one go.
+In Simple RNN, its different, Every node in hidden layer contains a self loop and loop to other nodes in the hidden layer. When One node generates it output, this output is passed to itself and to other nodes. By doing this Simple RNN can retain previous information. Also inputs are passed once every time stamp.
