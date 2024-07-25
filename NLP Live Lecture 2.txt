@@ -3,4 +3,8 @@
 3. Vocabulary no of unique words found in corpus.
 
 Audio Classification Project:
-IPython.display is used to display audio file and it takes file name and sample rate as arguments.
+IPython.display is used to play audio file and it takes file name and sample rate as arguments.
+Librosa.display.waveplot(data,sampler_rate) is used to display graph.
+Sample rate is the number of samples per second that are taken of a waveform to create a discete digital signal.
+Audio sampling is the process of transforming a musical source into a digital file.
+Librosa converts sterio channel to mono
