@@ -10,3 +10,6 @@ Audio sampling is the process of transforming a musical source into a digital fi
 Librosa converts sterio channel to mono.
 Librosa returns 2 Things sample rate and data.
 Data are the wavepoints which can represented as an array of interger and it is normalized.
+ANN Vs RNN
+ANN cannot handle sequential data where position of an element is important for example if we pass it a sentence we convert it into a vector using BOW,Word2Vec which causes the information loss about the each words position.
+Example when use google translate if have to process word sequentially to generate valid translations.
