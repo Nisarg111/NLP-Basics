@@ -26,6 +26,8 @@ Problems in Simple RNN:
 
 LSTM: - 
 
+Wieghts and baisis are called trainable parameters.
+
 LSTM has 3 parts Forget Gate, Input Gate and Candidate memory and Output gate.
 1)Let's define the notation first:
 
