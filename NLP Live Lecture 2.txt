@@ -221,7 +221,7 @@ Output Layer:
         "York" -> "LOCATION"
 
 
-4) Encoder And Decoder:
+4) Encoder And Decoder (Seq to Seq Architecture):
 
 Encoder encodes the text into context Vector using LSTM and passes this context vector Decoder.
 Decoder is also LSTM which generates One word at a time and passes it back it self to generate the whole sentence.
