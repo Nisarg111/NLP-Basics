@@ -90,5 +90,68 @@ The key strengths of this architecture are:
 3) Basically different types of LSTM are determined by the way we candidate memory or output put of gates like forgot gate to other gates.
 
 
+2)GRU
+
+GRU has only 1 memory cell
+
+Certainly. The Gated Recurrent Unit (GRU) is a simplified version of the LSTM, with fewer parameters and gates. GRU combines the forget and input gates into a single "update gate" and merges the cell state and hidden state. Here are the formulas for GRU:
+Let's first define the notation:
+
+x_t: input at time t
+h_t-1: hidden state at time t-1
+W: weight matrices
+b: bias vectors
+σ: sigmoid function
+tanh: hyperbolic tangent function
+⊙: element-wise multiplication (Hadamard product)
+
+Now, let's look at the components of GRU:
+
+Update Gate:
+The update gate decides how much of the past information (from previous time steps) needs to be passed along to the future. It acts similarly to the forget and input gates of an LSTM.
+
+Formula:
+z_t = σ(W_z · [h_t-1, x_t] + b_z)
+
+Reset Gate:
+The reset gate determines how much of the past information to forget.
+
+Formula:
+r_t = σ(W_r · [h_t-1, x_t] + b_r)
+
+Candidate Hidden State:
+This is the new candidate hidden state, computed using the reset gate.
+
+Formula:
+h̃_t = tanh(W · [r_t ⊙ h_t-1, x_t] + b)
+
+Hidden State Update:
+The new hidden state is a linear interpolation between the previous hidden state and the candidate hidden state, using the update gate.
+
+Formula:
+h_t = (1 - z_t) ⊙ h_t-1 + z_t ⊙ h̃_t
+In these formulas:
+
+W_z and W_r are weight matrices for the update gate and reset gate respectively.
+W is the weight matrix for the candidate hidden state.
+b_z, b_r, and b are the corresponding bias vectors.
+[h_t-1, x_t] represents the concatenation of the previous hidden state and the current input.
+
+Key points about GRU:
+
+The update gate z_t determines how much of the previous hidden state to keep.
+The reset gate r_t allows the model to forget past information by setting values close to 0.
+The candidate hidden state h̃_t is computed using the reset gate, allowing the model to drop irrelevant information.
+The final hidden state h_t is a mixture of the previous hidden state and the candidate hidden state, controlled by the update gate.
+
+Compared to LSTM:
+
+GRU has fewer parameters, which can make it faster to train and less prone to overfitting on smaller datasets.
+GRU combines the cell state and hidden state, while LSTM keeps them separate.
+GRU uses two gates (update and reset) instead of three (input, forget, output) in LSTM.
+
+In practice, both LSTM and GRU can perform well, and the choice between them often depends on the specific task and dataset. GRU might be preferred for smaller datasets or when computational efficiency is a concern, while LSTM might have an edge in modeling longer-term dependencies in some cases.
+
+
 
 
