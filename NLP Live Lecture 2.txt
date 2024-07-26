@@ -22,3 +22,70 @@ In Simple RNN, its different, Every node in hidden layer contains a self loop or
 Problems in Simple RNN:
 1) When sentences has many words and has dependencies on prevous words it can not capture it well.
 2) Also Vanishing gradiend problem occurs when no. of words is large as we have to calculate derivate for all and which may lead to weight updation at t1 to be near zero which means it does not contribute much in computation
+
+
+LSTM: - 
+
+LSTM has 3 parts Forget Gate, Input Gate and Candidate memory and Output gate.
+1)Let's define the notation first:
+
+    x_t: input at time t
+    h_t-1: hidden state at time t-1
+    c_t-1: cell state at time t-1
+    W: weight matrices
+    b: bias vectors
+    σ: sigmoid function
+    tanh: hyperbolic tangent function
+    ⊙: element-wise multiplication (Hadamard product)
+
+    Input Gate: The input gate determines what new information will be stored in the cell state.
+
+    Formula:
+    i_t = σ(W_i · [h_t-1, x_t] + b_i)
+
+    Forget Gate: The forget gate decides what information to discard from the cell state.
+
+Formula:
+f_t = σ(W_f · [h_t-1, x_t] + b_f)
+
+    Output Gate: The output gate controls what information from the cell state will be output.
+
+Formula:
+o_t = σ(W_o · [h_t-1, x_t] + b_o)
+
+Additionally, there are two more important components:
+
+    Candidate Cell State: This is the new candidate values that could be added to the cell state.
+
+Formula:
+c̃_t = tanh(W_c · [h_t-1, x_t] + b_c)
+
+    Cell State Update: The new cell state is calculated using the forget gate, input gate, and candidate cell state.
+
+Formula:
+c_t = f_t ⊙ c_t-1 + i_t ⊙ c̃_t
+
+    Hidden State Update: The new hidden state is calculated using the output gate and the updated cell state.
+
+Formula:
+h_t = o_t ⊙ tanh(c_t)
+
+In these formulas:
+
+    W_i, W_f, W_o, and W_c are weight matrices for the input gate, forget gate, output gate, and candidate cell state respectively.
+    b_i, b_f, b_o, and b_c are the corresponding bias vectors.
+    [h_t-1, x_t] represents the concatenation of the previous hidden state and the current input.
+
+These formulas work together to allow the LSTM to selectively remember or forget information over long sequences, addressing the vanishing gradient problem that affects simple RNNs.
+
+The key strengths of this architecture are:
+
+    The forget gate allows the network to reset its state when needed.
+    The input gate allows selective updates to the cell state.
+    The output gate allows the cell state to affect the hidden state only when needed.
+
+2) PeepHoles in LSTM occurs in LSTM varient when Candidate memory is provided as input to all gates i.e. Forget gate, Input Gate, Ouput Gate
+
+
+
+
