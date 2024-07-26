@@ -84,7 +84,7 @@ The key strengths of this architecture are:
     The input gate allows selective updates to the cell state.
     The output gate allows the cell state to affect the hidden state only when needed.
 
-2) PeepHoles in LSTM occurs in LSTM varient when Candidate memory is provided as input to all gates i.e. Forget gate, Input Gate, Ouput Gate
+2) PeepHole Connections in LSTM occurs in LSTM varient when Candidate memory is provided as input to all gates i.e. Forget gate, Input Gate, Ouput Gate
 
 
 
