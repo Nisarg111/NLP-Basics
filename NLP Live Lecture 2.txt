@@ -152,6 +152,74 @@ GRU uses two gates (update and reset) instead of three (input, forget, output) i
 
 In practice, both LSTM and GRU can perform well, and the choice between them often depends on the specific task and dataset. GRU might be preferred for smaller datasets or when computational efficiency is a concern, while LSTM might have an edge in modeling longer-term dependencies in some cases.
 
+3) Bidirecitional RNN: 
+A Bidirectional Recurrent Neural Network (BiRNN) is a type of RNN that processes data in both forward and backward directions with two separate hidden layers. This allows the network to have information from both past and future states, providing more context for making predictions. Here’s a detailed explanation along with an example:
+Architecture
+
+    Input Layer: Sequence of data points (e.g., words in a sentence).
+    Forward RNN Layer: Processes the input sequence from the first to the last element.
+    Backward RNN Layer: Processes the input sequence from the last to the first element.
+    Concatenation or Summation Layer: Combines the outputs from the forward and backward layers.
+    Output Layer: Produces the final output based on the combined context.
+
+Forward and Backward Passes
+
+    Forward Pass: ht→=σ(Wih⋅xt+Whh⋅ht−1→+bh)ht​
+
+​=σ(Wih​⋅xt​+Whh​⋅ht−1​+bh​)
+ht→ht​ : Hidden state at time tt in the forward direction
+    WihWih​: Input-to-hidden weights
+    WhhWhh​: Hidden-to-hidden weights
+    xtxt​: Input at time tt
+    σσ: Activation function
+    bhbh​: Bias term
+
+Backward Pass: ht←=σ(Wih⋅xt+Whh⋅ht+1←+bh)ht​
+​=σ(Wih​⋅xt​+Whh​⋅ht+1​+bh​)    
+ht←ht​: Hidden state at time tt in the backward direction
+
+Combining: The hidden states from the forward and backward passes can be concatenated or summed:
+
+    Concatenation: ht=[ht→,ht←]ht​=[ht​​,ht​]
+Summation: ht=ht→+ht←ht​=ht​​+ht​
+Example
+
+Let's consider a simple example of a BiRNN applied to a sequence of words in a sentence for a Named Entity Recognition (NER) task.
+
+Sentence: "John lives in New York"
+
+    Input Layer: The words are first converted into word embeddings (vectors).
+        x1​ = embedding("John")
+        x2​ = embedding("lives")
+        x3​ = embedding("in")
+        x4​ = embedding("New")
+        x5​ = embedding("York")
+
+    Forward RNN Layer:
+        Processes the sentence from "John" to "York".
+        Computes forward hidden states h1→,h2→,h3→,h4→,h5→h1​​,h2​​,h3​​,h4​​,h5​
+
+Backward RNN Layer:
+
+    Processes the sentence from "York" to "John".
+    Computes backward hidden states h1←,h2←,h3←,h4←,h5←h1​​,h2​​,h3​​,h4​,h5​  ​.
+
+Combining:
+
+    For each time step, combine the forward and backward hidden states.
+    For instance, at time step 1:
+        h1=[h1→,h1←]h1​=[h1​​,h1​]
+
+Output Layer:
+
+    Use the combined hidden states to predict the entity tags for each word.
+    For instance, the output could be:
+        "John" -> "PERSON"
+        "lives" -> "O" (no entity)
+        "in" -> "O"
+        "New" -> "LOCATION"
+        "York" -> "LOCATION"
+
 
 
 
