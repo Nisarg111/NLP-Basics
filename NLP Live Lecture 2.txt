@@ -235,6 +235,13 @@ Decoder is also LSTM which generates One word at a time and passes it back it se
 Bleu Score is used to measure the performance of Seq to Seq Models.
 Seq2Seq's performance decrease as the length of sentence increases.
 
+5) Transformer (Encoder decoder Sequence)
+
+For basic understanding: 
+http://jalammar.github.io/illustrated-transformer/
+For Advance topic: 
+https://chatgpt.com/share/5a78a857-e9c4-4d00-991a-40d4d1501331
+
 
 
 
