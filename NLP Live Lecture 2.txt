@@ -2,6 +2,10 @@
 2. Document can be defined individual data points in a datasets or to be put simply we can say sentences.
 3. Vocabulary no of unique words found in corpus.
 
+Feed-Forward Neural Network
+A Feed-Forward Neural Network (FFNN) is one of the simplest forms of artificial neural networks. It consists of multiple layers of neurons, where the information moves in one direction—from the input layer, through the hidden layers, and finally to the output layer.
+
+
 Audio Classification Project:
 IPython.display is used to play audio file and it takes file name and sample rate as arguments.
 Librosa.display.waveplot(data,sampler_rate) is used to display graph.
