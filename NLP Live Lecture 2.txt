@@ -5,7 +5,7 @@
 Feed-Forward Neural Network
 A Feed-Forward Neural Network (FFNN) is one of the simplest forms of artificial neural networks. It consists of multiple layers of neurons, where the information moves in one direction—from the input layer, through the hidden layers, and finally to the output layer.
 
-Linear transformation is applied to the input vector xx. This transformation involves multiplying xx by a weight matrix W1 and adding a bias vector b1​.
+Linear transformation is Multiplying inputs with Weight and adding a bias​.
 z1=xW1+b1
 
 Audio Classification Project:
