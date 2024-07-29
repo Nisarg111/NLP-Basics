@@ -244,6 +244,32 @@ Transformer are deep learning models that use self-attention mechanism to analyz
 Encoder does not work or take input in sequences instead batch of words are taken as inputs.
 Self attention is also called scaled dot product attention.
 
+Contextual Vector is vector that defines the attention to a token based on its relation with all other token.
+
+Self Attention Working:
+
+1)Token Embedding: Convert token into vectors.
+
+2)Linear Transformation: Multiply the vectors with Matrices Wq, Wk and Wv to Obtain Query, Key, and Value.
+    Query (Q):
+    Intuitive: A question or search term; what you're looking for, or current term for which we want find attention.
+    Formal: A learned vector representation of the current token's "request" for information.
+    Key (K):
+    Intuitive: A label or identifier for each piece of information. It is multiplied with query to generate the value.
+    Formal: A learned vector representation of each token encoding its relevance to potential queries.
+    Value (V):
+    Intuitive: The actual content or information associated with each key.
+    Formal: A learned vector representation of each token containing its informational content.
+
+3)Compute The score: Multiply Q with Ki (0<i<n where n is number of tokens) here one vector is transposed i.e. To convert it rows into columns and columns into rows.
+
+4)Scale: We scale the score by dividing it with root of (dimension). It is done for all tokens and their scores.
+    Advantages: Avoids Gradient Explode(The gradient explode problem essentially means that the weights in the neural network become too large.This problem typically occurs     in deep networks or RNNs with long sequences. As gradients are propagated backwards through many layers or time steps, they can accumulate and grow exponentially.)
+    Avoids Softmax Saturation(Most probablity going to one token)
+
+5)Apply Softmax
+
+
 For basic understanding: 
 http://jalammar.github.io/illustrated-transformer/
 For Advance topic: 
