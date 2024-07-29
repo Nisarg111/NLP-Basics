@@ -285,7 +285,10 @@ For Advance topic:
 https://chatgpt.com/share/5a78a857-e9c4-4d00-991a-40d4d1501331
 
 
+Types of Positional Encoding:
 
+1)Sinusoidal Position Encoding
+2)Learned Positional Encoding
 
 
 
