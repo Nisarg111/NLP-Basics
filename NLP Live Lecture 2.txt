@@ -260,6 +260,7 @@ Self Attention Working:
     Value (V):
     Intuitive: The actual content or information associated with each key.
     Formal: A learned vector representation of each token containing its informational content.
+    It has initial value of the embedding.
 
 3)Compute The score: Multiply Q with Ki (0<i<n where n is number of tokens) here one vector is transposed i.e. To convert it rows into columns and columns into rows.
 
@@ -267,8 +268,16 @@ Self Attention Working:
     Advantages: Avoids Gradient Explode(The gradient explode problem essentially means that the weights in the neural network become too large.This problem typically occurs     in deep networks or RNNs with long sequences. As gradients are propagated backwards through many layers or time steps, they can accumulate and grow exponentially.)
     Avoids Softmax Saturation(Most probablity going to one token)
 
-5)Apply Softmax
 
+5)Apply Softmax which gives Attention weights for each token. 
+For example If the sentences is "The Cat Sat" Then we will have Attention Weights for the = softmax([Scaled score of the with respect to all tokens]) = softmax([0,1,1]) 0 = Score with the and the, 1= score with the and cat, last for score with the and sat.
+
+6)Weights sum of values:
+We multiply attention weights with the value to get Contextual Vector.
+Context Vector For "The" = Attention Weighti * Valuei i.e In [Attention Weight first scaler is for The and The so we multiply Atention Weight(1) * Value(the) , Second scalar is for the and cat so Attention Weight(2) , Value of cat same for the last]
+
+
+6)Weighted Sum: of values: Here 
 
 For basic understanding: 
 http://jalammar.github.io/illustrated-transformer/
