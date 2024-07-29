@@ -242,6 +242,7 @@ Encoder And Decoder Architecture takes input in sequence
 
 Transformer are deep learning models that use self-attention mechanism to analyze and process natural language data.
 Encoder does not work or take input in sequences instead batch of words are taken as inputs.
+Self attention is also called scaled dot product attention.
 
 For basic understanding: 
 http://jalammar.github.io/illustrated-transformer/
