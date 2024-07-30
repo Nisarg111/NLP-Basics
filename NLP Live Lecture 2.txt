@@ -318,6 +318,11 @@ Normalization is done row wise for each column in the row.
     By scaling and shifting, the model can still represent the original data distribution if needed.
     These parameters help in capturing the different scales and distributions of different features, which might be important for the task at hand.
 
+8) Feed Forward Neural Network:
+
+    It is used to bring non linear functionality of dataset.
+    It also processes each position independently
+
 
 
 
