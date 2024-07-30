@@ -291,6 +291,34 @@ Types of Positional Encoding:
 2)Learned Positional Encoding
 
 
+7)Layer Normalization and add residuals:
+
+Add (Residual Connection)
+The residual connection helps to alleviate the vanishing gradient problem by allowing gradients to flow through the network more effectively. It works as follows:
+
+    The output of the sub-layer (e.g., a multi-head attention or feed-forward network) is added to the original input of that sub-layer.
+    Mathematically, if the input to the sub-layer is xx and the output of the sub-layer is S(x)S(x), then the residual connection is:
+
+Normalize (Layer Normalization)
+
+After adding the residual connection, layer normalization is applied to stabilize and improve the training process. Layer normalization is performed as follows:
+Normalization is done row wise for each column in the row.
+
+    Compute the mean and variance across the features for each data point.
+    Normalize the input by subtracting the mean and dividing by the standard deviation.
+    Apply learnable scaling (γγ) and shifting (ββ) parameters to the normalized values.
+    Mathematically, for an input yy:
+    LN(y)=γ((y−μσ2+ϵ)/γ(σ2+ϵ))+β
+
+    Gamma and Beta are learnable parameters
+    Gamma (γ): This parameter is used to scale the normalized output.
+    Beta (β): This parameter is used to shift the normalized output.
+    The learnable parameters γγ and ββ allow the model to learn the optimal scale and shift for the normalized data. This flexibility is crucial because:
+    Normalization alone might limit the representational power of the network.
+    By scaling and shifting, the model can still represent the original data distribution if needed.
+    These parameters help in capturing the different scales and distributions of different features, which might be important for the task at hand.
+
+
 
 
 
