@@ -16,3 +16,23 @@ and max is 1/ root of I/P.
   Two Types:
             1) He Normal initializatio same as above mut different range  Wij is equivalent to N(0,σ) where σ = Root of (2/input)
             2) He Uniform same as above type but range is min = - (root 6)/ root input max = root 6)/ root input
+
+Dropout:
+Dropout is a regularization technique used in neural networks to prevent overfitting. Here's an overview of the key aspects of dropout:
+
+Basic concept:
+Randomly "drop out" (i.e., temporarily remove) a portion of neurons during training.
+
+How it works:
+During each training iteration, each neuron has a probability p of being temporarily disabled.
+The network is forced to learn with a different subset of neurons each time.
+(Or in training instead of disabling the neuron we can multiply its weight with p)
+
+Implementation:
+Training phase: Multiply each neuron's output by a binary mask (0 or 1) drawn from a Bernoulli distribution with probability p.
+Inference phase: All neurons are active, but their outputs are scaled by p to maintain the expected output magnitude.
+
+Benefits:
+Reduces overfitting by preventing complex co-adaptations between neurons.
+Acts as an ensemble method, effectively training many different networks.
+Improves generalization by making the network more robust.
