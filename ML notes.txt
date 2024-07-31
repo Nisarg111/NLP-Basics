@@ -1,2 +1,18 @@
 ML Notes: - https://chatgpt.com/share/245dbe82-3740-434d-82a6-c5ccbdec2881
 
+Types of Weight Distribution techniques:
+
+Here I/P and O/P means number of Inputs and Outputs
+
+1) Uniform Distribution: Here value Wij where i is hidden layer and j is unit in hidden layer is selected from a uniform distribution whose min value is -1/root of I/P
+and max is 1/ root of I/P.
+
+2)Xavier/Glora Initialization:
+  Two Types:  
+            1) Xavier Normal initialization from normal distribution where Wij is equivalent to N(0,σ) where σ = Root of (2/input + output)
+            2) Xavier Uniform also from normal distribution but range is min = - (root 6)/ root input+output max = root 6)/ root input+output
+
+3) Kaiming He Initialization:
+  Two Types:
+            1) He Normal initializatio same as above mut different range  Wij is equivalent to N(0,σ) where σ = Root of (2/input)
+            2) He Uniform same as above type but range is min = - (root 6)/ root input max = root 6)/ root input
