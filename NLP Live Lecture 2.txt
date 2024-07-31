@@ -329,6 +329,8 @@ Normalization is done row wise for each column in the row.
     2)Multihead Attention which take Q (Query) as input from Masked Multihead Attention and Key and Value from encoder.
     3)Add and Norm
     4)Feed Forward neural network
+    5)Linear Layer: It is a simple fully connected nueral network and it projects the output of stacked decoder in logits vector which is a vector of size of vocalbulary.
+    6)Softmax activation function is for multi class classification for getting the highest probablility from the logits vector.
 
 
 
