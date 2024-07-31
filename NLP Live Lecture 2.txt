@@ -323,6 +323,12 @@ Normalization is done row wise for each column in the row.
     It is used to bring non linear functionality of dataset.
     It also processes each position independently
 
+9) Decoder Consists of:
+
+    1)Masked Multihead attention
+    2)Multihead Attention which take Q (Query) as input from Masked Multihead Attention and Key and Value from encoder.
+    3)Add and Norm
+    4)Feed Forward neural network
 
 
 
