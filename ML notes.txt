@@ -65,4 +65,10 @@ x is the size of the required output size
 6) Min, Average, Max pooling:
 Pooling is a technique used to extract more feature from the resultant matrices of the filter.
 Here a pooling matrix is created, which applied on the resultant matrix and it creates a new matrix and value of each scalar in new matrix is the max value of the transposed matrices the resultant matrix and pooling matrix then pooling matrix is shifted by stride.
-Same for min and average
+Same for min and average. 
+
+It is called Location invariant.
+
+7)Flattening means to convert all matrices into a single column vector. All matrices are appended one after another.
+8)This output is passed to Fully connected neural network.
+9) From input to flatting is called Feature Extraction, Then FCNN is called classification.
