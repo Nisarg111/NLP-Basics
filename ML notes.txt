@@ -10,7 +10,7 @@ Purity of a split is checked by:
 1)Entropy
 2)Gini Index
 
-
+Information Gain is used to select the feature to make a split.
 
 
 
