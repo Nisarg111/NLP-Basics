@@ -84,6 +84,7 @@ Formula = Var(root) - Sum of 1 to n(Wi * Var child)
 Now Wi for above example we will be:
 For left child only 1 element is from total 5 elements so its weight will be 1/5.
 For right child it has 4 elements out of 5 so its weight will be 4/5.
+Root node with high variance reduction is selected.
 
 
 Types of Weight Distribution techniques:
