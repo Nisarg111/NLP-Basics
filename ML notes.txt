@@ -6,6 +6,9 @@ Two Types:
 ID3 can have max n number of child.
 CART can have max 2 number of child.
 
+
+Classification Problem:
+
 Purity of a split is checked by:
 1)Entropy
 2)Gini Index
@@ -64,6 +67,23 @@ Post Prunning: First we create Decision Tree, then apply prunning. Usefull for s
 Pre Prunning: Hyperparameter tuning while constructing Decision Tree.
 Some of the features: max depth, max feature, criterrian, splitter etc. 
 
+
+Regression Problem:
+
+We use variance to decide the split.
+
+We will do it for each feature to decide and same as classification problem we will apply this to root and its child.
+Variance(root) = 1/n (Sum of 1 to n (y - Ybar(Average Y))^2)
+here n is no. of total element.
+For example we feature Year and it has 3,4,5,6,7 and we make a split with year<=3 so on left we have 1 element and for right we 4 elements.
+Taking this example, if root is 4 then n is 5.
+For its child on left n = 1 and for right child n = 4
+
+After we calculate this for all root feature we will apply Varience Reduction:
+Formula = Var(root) - Sum of 1 to n(Wi * Var child)
+Now Wi for above example we will be:
+For left child only 1 element is from total 5 elements so its weight will be 1/5.
+For right child it has 4 elements out of 5 so its weight will be 4/5.
 
 
 Types of Weight Distribution techniques:
