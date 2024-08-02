@@ -1,5 +1,20 @@
 ML Notes: - https://chatgpt.com/share/245dbe82-3740-434d-82a6-c5ccbdec2881
 
+
+Decision Tree:
+Two Types:
+ID3 can have max n number of child.
+CART can have max 2 number of child.
+
+Purity of a split is checked by:
+1)Entropy
+2)Gini Index
+
+
+
+
+
+
 Types of Weight Distribution techniques:
 
 Here I/P and O/P means number of Inputs and Outputs
