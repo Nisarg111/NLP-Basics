@@ -55,7 +55,14 @@ Then Next part represent the sum of
 H(Sv) is the entropy of the child
 We will calculate this for every child of root node and depth of the tree can be n i.e. tree can be classified or split to n depth.
 
+Prunning:
 
+Prunning is used to avoid overfitting of data which happens when we create a decision tree with all possible splits. It is also called Low Bais and High Variance.
+
+Two Types:
+Post Prunning: First we create Decision Tree, then apply prunning. Usefull for small dataset.
+Pre Prunning: Hyperparameter tuning while constructing Decision Tree.
+Some of the features: max depth, max feature, criterrian, splitter etc. 
 
 
 
