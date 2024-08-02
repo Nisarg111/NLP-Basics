@@ -36,3 +36,29 @@ Benefits:
 Reduces overfitting by preventing complex co-adaptations between neurons.
 Acts as an ensemble method, effectively training many different networks.
 Improves generalization by making the network more robust.
+
+
+
+Convolution Neural Network:
+
+It is used for image processing.
+
+Image types:
+Gray Scale Image(Black and white Image): has 1 channel and is represented Length * width * No. Of Channel = 6*6*1
+RGB Image(Color Image): has 3 channel. Example 6*6*3
+
+1) Step is to Normalize image to get its value between 0 to 1. Which can be done by dividing value of each pixel by 255 because range of pixel is 0 to 255.
+2) Then we perform convulution operation which is the process of extracting features from images which done putting up a matrix know as filter(There can be of many types and its values are derived from back propagation and filter can be smaller than image or of same size. It helps extract feature like veritcal or horizontal or circular edges etc) on top of the image and in multiped and added to each of the scalar of image to create a new matrix. Stride is used to define the movement of the filter like after 1st output by how much pixel it should be shifted to in any direction .See video to understand more.
+3)This new matrix is smaller than the image which results in information loss so we use padding.
+  Two Types:
+  1) Zero Padding: We assign zero to the new zone
+  2) Neighbour Padding: We assign the value of the nearest pixel or neighbour pixel.
+To define the size of padding formula is
+n-f+2p+1=x
+N is size of original image
+f is size of frame
+p is padding
+x is the size of the required output size
+
+4) After applying filters we get their respective matrices on which we apply relu activation function to assign weights effective during backward propagation.
+5) All the process till now it is called Convolutional layer and their can be n number of convonutional layers.
