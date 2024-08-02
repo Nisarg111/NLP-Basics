@@ -13,6 +13,50 @@ Purity of a split is checked by:
 Information Gain is used to select the feature to make a split.
 
 
+Entropy: 
+
+Formula H(C1): -(P+ log2P+) - (P- log2P-) For Binary Classification. 
+Range is 0 to 1 where 1 is highly impure and 0 is pure
+P+ is the probability of output being positive
+P- is the probability of output being negative.
+
+Gini Impurity:
+
+Formula: 1 - Sum of i to n P^2, where P = (P+^2 + P-^2)
+Range is 0 to 0.5 where 0 is pure where 0.5 is impure
+
+
+Gini Impurity:
+
+Generally faster to compute
+Works well with small datasets
+Often preferred in random forest algorithms
+Tends to isolate the most frequent class in its own branch
+
+Entropy:
+
+Can be more sensitive to impurities
+May create more balanced trees
+Often used in ID3 algorithm
+Can be slightly slower to compute than Gini
+
+In practice, the choice between Gini impurity and entropy often doesn't make a significant difference in the performance of the decision tree. Many data scientists experiment with both and choose the one that gives slightly better results for their specific dataset.
+
+Information Gain:
+
+Information Gain is used to find the best feature to split.
+
+Formula: H(S) - Sum of ( (|Sv| / |S|) * H(Sv))
+
+Here H(S) is the entropy of the root feature.
+Then Next part represent the sum of 
+|Sv| is the total number of splits of the child Like for a binary category we have 5yes/3 No then Sv = 8
+|S| is the total number of splits in root
+H(Sv) is the entropy of the child
+We will calculate this for every child of root node and depth of the tree can be n i.e. tree can be classified or split to n depth.
+
+
+
 
 
 Types of Weight Distribution techniques:
