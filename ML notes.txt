@@ -62,3 +62,7 @@ x is the size of the required output size
 
 4) After applying filters we get their respective matrices on which we apply relu activation function to assign weights effective during backward propagation.
 5) All the process till now it is called Convolutional layer and their can be n number of convonutional layers.
+6) Min, Average, Max pooling:
+Pooling is a technique used to extract more feature from the resultant matrices of the filter.
+Here a pooling matrix is created, which applied on the resultant matrix and it creates a new matrix and value of each scalar in new matrix is the max value of the transposed matrices the resultant matrix and pooling matrix then pooling matrix is shifted by stride.
+Same for min and average
