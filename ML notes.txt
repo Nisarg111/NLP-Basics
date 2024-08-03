@@ -132,10 +132,39 @@ Random Forest Classifier:
 Ensemble Technique: Ensemble learning is a machine learning technique that aggregates two or more learners (e.g. regression models, neural networks) in order to produce better predictions.
 
 Types:
-1) Bagging: N number of model are trained on subset of dataset parallely and then their output is combined to get the output. For classification Major Voting(Class that is selected by most model) and for regression Average is taken of all output.
+1) Bagging: N number of model are trained on subset of dataset parallely and then their output is combined to get the output. For classification Major Voting(Class that is selected by most model) and for regression Average is taken of all output.Example
+    Bagging Meta-estimator.
+    Random Forest.
+    Extra Trees (Extremely Randomized Trees)
+    Pasting.
+    Bootstrap Aggregating (Bagging)
+    Balanced Random Forest.
+    Random Subspaces.
+    Feature Bagging.
 2) Boosting: N number of model are trainned sequentially. To first model entire dataset is passed then it makes prediction, the prediction that are incorrect are passed to the next weak learner with the dataset these cycle is repeated till a strong learner is produced by combining all weak learner.
 
 
+Random Forest:
+
+For each model in decision tree we provide a subset of dataset which is done using row sampling and feature sampling which means we only pass selected rows and columns to the model. Two or model might have same features and row.
+
+Classification: Major Voting
+Regression: Average of Output of all model
+
+Why use Random Forest instead of Decision Tree?
+Because Decision Tree leads to overfitting i.e low bais and high vairance.
+
+
+
+
+Column Transformer:
+Column transformer is used to combine preprocessing of different types of data like for numeric standardscalar and for categorical one hot encoding.
+Example:
+
+preprocessor = ColumnTransformer([
+("OneHotEncoder",name_of_transformer_obj,name_of_columns),
+("StandardScalar",name_of_transformer_obj,name_of_columns)
+])
 
 
 
