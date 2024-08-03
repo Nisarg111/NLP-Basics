@@ -126,6 +126,19 @@ Improves generalization by making the network more robust.
 
 
 
+
+Random Forest Classifier:
+
+Ensemble Technique: Ensemble learning is a machine learning technique that aggregates two or more learners (e.g. regression models, neural networks) in order to produce better predictions.
+
+Types:
+1) Bagging: N number of model are trained on subset of dataset parallely and then their output is combined to get the output. For classification Major Voting(Class that is selected by most model) and for regression Average is taken of all output.
+2) Boosting: N number of model are trainned sequentially. To first model entire dataset is passed then it makes prediction, the prediction that are incorrect are passed to the next weak learner with the dataset these cycle is repeated till a strong learner is produced by combining all weak learner.
+
+
+
+
+
 Convolution Neural Network:
 
 It is used for image processing.
