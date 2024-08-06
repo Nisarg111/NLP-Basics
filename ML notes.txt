@@ -182,8 +182,25 @@ Distance above the plane or angle with the hyperplane and point is less than 90 
 Formula for best fit line = W(transpose)ofx + b = 0 
 Formula for positive support vector = W(transpose)ofx + b = +1
 Formula for negative support vector = W(transpose)ofx + b = -1
-Cost Function = Min(w,b) ||w||/2  (||w|| is called magnitude of w and cost function should be maximized to increase the distance between the support vector)
+Cost Function = Min(w,b) ||w||/2 + Ci Sum of i to n Eta of i      
+(||w|| is called magnitude of w and cost function should be maximized to increase the distance between the support vector)
+(Ci to i is Hingle loss and Ci represents how many no. of pointes can be misclassified and tolerated)
+(Eta is represented with a curvy horizontal line and it is summation of distance of incorrect points from the marginal plane)
 
+Regression PROBLEM:
+
+Predicted and observed should in support marginal vector, this indicates model is performing well.
+Points above or below those vectors are considered for calculation of hinge loss.
+Here formular for best support vectors are W(transpose) of x + b + Epsilon for positive
+Here formular for best support vectors are W(transpose) of x + b - Epsilon for negative
+(Epsilon is error between the predicted points and the marginal vector)
+
+Kernel are used when data points can not be separable in the given plain so we need to convert them into different plain, there transformation is done using kernel.
+Examples of kernel:
+1) Polynomial
+2)linear
+3)rbf
+4)sigmoid
 
 
 Convolution Neural Network:
