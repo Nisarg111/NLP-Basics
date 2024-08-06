@@ -182,6 +182,7 @@ Distance above the plane or angle with the hyperplane and point is less than 90 
 Formula for best fit line = W(transpose)ofx + b = 0 
 Formula for positive support vector = W(transpose)ofx + b = +1
 Formula for negative support vector = W(transpose)ofx + b = -1
+Cost Function = Min(w,b) ||w||/2  (||w|| is called magnitude of w and cost function should be maximized to increase the distance between the support vector)
 
 
 
