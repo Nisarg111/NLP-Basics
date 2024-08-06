@@ -177,6 +177,12 @@ It has two Types:
 2) Support Vector Classifier
 
 
+Distance below the plane or angle with the best fit line and point > 90 degree, distance will be negative.
+Distance above the plane or angle with the hyperplane and point is less than 90 degree, distance will be positive.
+Formula for best fit line = W(transpose)ofx + b = 0 
+Formula for positive support vector = W(transpose)ofx + b = +1
+Formula for negative support vector = W(transpose)ofx + b = -1
+
 
 
 Convolution Neural Network:
