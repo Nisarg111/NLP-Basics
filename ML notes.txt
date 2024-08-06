@@ -168,6 +168,17 @@ preprocessor = ColumnTransformer([
 
 
 
+SVM (Support Vector Machine):
+
+https://chatgpt.com/share/33cc8a55-888a-4327-ba38-d6b01d1632cd
+
+It has two Types:
+1) Support Vector Regressor
+2) Support Vector Classifier
+
+
+
+
 Convolution Neural Network:
 
 It is used for image processing.
