@@ -109,6 +109,9 @@ Disadvantage:
     2. Out off vocabulary problem solved as new feature/word can be represented with 0.
     3. Semantic Information is getting captured.
 
+How Google trained its Word2Veck Model:
+It trained the model With CBOW and Skip gram to make the model understand and generate vector based on the data.
+For example in my data I have always given royal Queen and King then it will generate a vector assosicated with it but When I ask for relation between Royal Boy Or Girl it will give vector with least realtion between them as my data on which the model was trained didn't contain that data.
 
 10. CBOW(Continous Bag Of Words):
     CBOW is a neural network-based algorithm that predicts a target word given its surrounding context words.
