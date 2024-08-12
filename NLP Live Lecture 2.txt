@@ -35,6 +35,8 @@ LSTM: -
 Wieghts and baisis are called trainable parameters.
 
 LSTM has 3 parts Forget Gate, Input Gate and Candidate memory and Output gate.
+Hidden state is the previous state of of nueron.
+Cell state
 1)Let's define the notation first:
 
     x_t: input at time t
@@ -100,7 +102,7 @@ The key strengths of this architecture are:
 
 GRU has only 1 memory cell
 
-Certainly. The Gated Recurrent Unit (GRU) is a simplified version of the LSTM, with fewer parameters and gates. GRU combines the forget and input gates into a single "update gate" and merges the cell state and hidden state. Here are the formulas for GRU:
+Certainly. The Gated Recurrent Unit (GRU) is a simplified version of the LSTM, with fewer parameters and gates. GRU combines the forget and input gates into a single "update gate" and merges the cell state(Long term memory) and hidden state(Previous output or state of nueron). Here are the formulas for GRU:
 Let's first define the notation:
 
 x_t: input at time t
