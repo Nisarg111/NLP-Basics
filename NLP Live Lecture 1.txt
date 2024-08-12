@@ -74,7 +74,8 @@ TF of Boy = No. of times word appeared / Total no. of words
 TF of Girl = No. of times word appeared / Total no. of words
            = 1/2
 
-IDF for Good: good is all three sentences so IDF = log e(3/3) = 0
+IDF for Good: Log e(Vocabulary/ total no. of times word appeared in sentence)
+good is all three sentences so IDF = log e(3/3) = 0
 IDF for Boy : log e (3/2)
 IDF for Girl: log e (3/2)
 
