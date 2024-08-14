@@ -1,0 +1,327 @@
+Creating Virtual Environment:
+
+1) python -m venv name, to activate name/scripts/activate
+2) By installing virtualenv : virtualenv -p python3 name
+3) Conda create -p name python == 3.10 -y
+
+
+Differents length arguments passed to funtion:
+
+1)One '*' is used to define variable length argument
+def f_name(*args):
+  for i in args:
+    print(i)
+
+2)Two '*' denotes key value arguments:
+def f_name(**kwargs):
+  for key,value in kwargs.items():
+    print(key +'='+value)
+
+f_name(Name='Nisarg', Surname = 'Vyas')
+
+
+LAmbda Function:
+
+When to use lambda function:
+1) When pass function as argument to higher order function.
+2) Inline Function
+3) Anonyms function
+add = lambda a,b: a+b
+
+
+Map Function: Map function is a function that is used to apply a function to all the elements in a list
+Example:
+
+list1 = [1,2,3]
+I want square all the numbers
+
+square = list(map(lambda x:x**2,list1))
+print square
+
+By using map function we will pass each item of the list to that function
+
+Adding 2 numbers from 2 list
+
+added = list(map(lambda x,y:x+y,num1,num2))
+
+
+3) Filter Function:
+
+Filter functio in used to apply a filter on a list.
+list(filter(func,list))
+Example: list(filter(lambda x:x>5, nums))
+
+
+Difference between Fit Transform and Tranform
+
+1) fit_transform:
+
+    Purpose: This method is used to compute the necessary statistics (like mean, variance, min, max, etc.) from the training data and then apply the transformation based on      those statistics.
+    Usage: Typically used on the training data to learn the parameters of the transformation and apply it in one step.
+
+2) Transform:
+
+    Purpose: This method is used to apply the already learned transformation (from fit or fit_transform) to new data.
+    Usage: Typically used on the validation or test data to apply the same transformation learned from the training data.
+
+What is np.c_
+
+np.c_ is a numpy function used to concatenate arrays along the second axis (columns). It's a convenient way to combine arrays or add new columns to an existing array.
+
+Here's a more detailed explanation:
+Usage of np.c_
+
+    Concatenating Arrays: np.c_ can be used to concatenate 1D or 2D arrays column-wise.
+    Creating 2D Arrays: It can be used to create 2D arrays from 1D arrays by stacking them as columns.
+
+Example: 
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+result = np.c_[a, b]
+print(result)
+# Output:
+# [[1 4]
+#  [2 5]
+#  [3 6]]
+
+
+
+Deploying a project in AWS in Elastic Beanstalk:
+
+Working of Beanstalk:
+  1) It directly takes code from github using Continous Delivery Pipeline provided by AWS.
+
+
+1) Create .ebextensions folder under which create a file python.config.
+  Python.config specifies the entry point of application. (Application.py is the entery point)
+2) Commit and push the file to github.
+3) Create a AWS and There search for Elastic Beanstalk.
+    AWS Elastic Beanstalk is a fully managed service offered by Amazon Web Services (AWS) that makes it easy for developers to deploy, manage, and scale web applications and     services.  
+            AWS offers a variety of services for deploying web applications, each with different levels of control, flexibility, and ease of use. Here are some of the key             services:
+
+          1. Amazon EC2 (Elastic Compute Cloud)          
+              Description: Provides resizable compute capacity in the cloud, allowing you to run virtual servers.
+              Use Case: Full control over the hosting environment. Suitable for applications that require custom configurations, non-standard software, or specific hardware               configurations.
+              Features:
+                  Custom AMIs
+                  Elastic IP addresses
+                  Load Balancing with ELB
+                  Auto Scaling
+          2. AWS Lambda
+              Description: A serverless compute service that runs your code in response to events and automatically manages the underlying compute resources.
+              Use Case: Ideal for event-driven architectures, microservices, and applications that require a small amount of code to be executed on demand.
+              Features:
+                  Zero administration
+                  Automatic scaling
+                  Integrated with AWS services (e.g., S3, DynamoDB, Kinesis)
+          
+          3. Amazon ECS (Elastic Container Service)
+              Description: A fully managed container orchestration service that makes it easy to deploy, manage, and scale containerized applications using Docker.
+              Use Case: Suitable for applications that are packaged as Docker containers and need to be orchestrated and scaled.
+              Features:
+                  Integration with AWS Fargate for serverless container deployment
+                  Deep integration with other AWS services
+                  Support for Docker and Kubernetes (via EKS)
+          4. Amazon EKS (Elastic Kubernetes Service)
+              Description: A managed Kubernetes service that makes it easy to run Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.
+              Use Case: Suitable for running Kubernetes workloads and leveraging the Kubernetes ecosystem.
+              Features:
+                  Managed control plane
+                  Integration with AWS networking and security services
+                  Support for hybrid deployment
+          5. AWS Fargate
+              Description: A serverless compute engine for containers that works with both Amazon ECS and Amazon EKS, allowing you to run containers without managing the                  underlying infrastructure.
+              Use Case: Ideal for running containerized applications without having to manage servers or clusters.
+              Features:
+                  No server management
+                  Seamless scaling
+                  Pay for usage
+          
+          6. AWS Amplify
+          
+              Description: A set of tools and services that enables front-end web and mobile developers to build full-stack applications, with features for hosting,                       authentication, APIs, and storage.
+              Use Case: Ideal for building and deploying full-stack web and mobile applications quickly with integrated CI/CD.
+              Features:
+                  Hosting and CDN
+                  Authentication and authorization
+                  API and data storage
+                  CI/CD for front-end and back-end
+          
+          7. AWS Elastic Beanstalk
+          
+              Description: An easy-to-use service for deploying and scaling web applications and services. It supports various languages and frameworks and automates the                  infrastructure management.
+              Use Case: Suitable for developers who want to deploy applications quickly without managing infrastructure.
+              Features:
+                  Automatic scaling
+                  Health monitoring
+                  Managed environment
+          
+          8. AWS Lightsail
+          
+              Description: A simplified cloud platform that offers everything needed to build an application or website, including virtual servers, storage, databases, and                networking.
+              Use Case: Suitable for simpler workloads, smaller applications, or users who prefer a more straightforward setup.
+              Features:
+                  Simple interface
+                  Pre-configured application stacks
+                  Predictable pricing
+          
+          9. Amazon S3 (Simple Storage Service)
+          
+              Description: Scalable object storage service for any type of data. Often used for static website hosting.
+              Use Case: Ideal for static websites, storing files, and data lake solutions.
+              Features:
+                  Scalable and durable
+                  Static website hosting
+                  Integration with CloudFront for CDN
+          
+          10. Amazon CloudFront
+          
+              Description: A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency                and high transfer speeds.
+              Use Case: Used to deliver content globally with low latency.
+              Features:
+                  Edge locations around the world
+                  Integration with AWS services
+                  Caching and distribution
+
+
+4) We have to create web app in Elastic Beanstalk
+    1) Give it name and select platform as python and select sample application. It will also create an environment.
+    2)  Then search for CodePipeline in AWS and create a new pipeline.
+    3) Give name to pipeline, click next, select source provider as github and select connect to github and then select the repository of the project.
+    4) Then click on next and select Build Provider.
+    5) Then it will ask where we to deploy the pipeline, Select AWS BeanStalk and then select the application name and environment and click on next.
+    6) Select Create Pipeline.
+5) Now Click on the link and which will redirect to applications and from application select the link of the web application to open the app.
+6) If change the source code in git, if we have to use release changes in AWS to apply the new changes.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that allows systems to learn from data, identify patterns, and make decisions with minimal human intervention. There are several types of machine learning, each with its unique methods and applications. Here are the main types:
+1. Supervised Learning
+
+In supervised learning, the model is trained on labeled data. This means that the input data is paired with the correct output. The goal is for the model to learn to predict the output from the input data.
+Examples:
+
+    Classification: Predicting a discrete label.
+        Email Spam Detection: Classifying emails as spam or not spam.
+        Image Recognition: Identifying objects in images (e.g., recognizing handwritten digits).
+
+    Regression: Predicting a continuous value.
+        House Price Prediction: Estimating the price of a house based on its features (size, location, etc.).
+        Stock Price Prediction: Predicting future stock prices based on historical data.
+
+2. Unsupervised Learning
+
+In unsupervised learning, the model is trained on data without labeled responses. The system tries to learn the patterns and the structure from the data.
+Examples:
+
+    Clustering: Grouping data points into clusters based on their similarities.
+        Customer Segmentation: Grouping customers based on purchasing behavior.
+        Market Basket Analysis: Finding items that frequently occur together in transactions.
+
+    Dimensionality Reduction: Reducing the number of random variables under consideration.
+        Principal Component Analysis (PCA): Reducing the dimensionality of data for visualization or to improve model efficiency.
+        t-SNE: Visualizing high-dimensional data in a two- or three-dimensional space.
+
+3. Semi-Supervised Learning
+
+Semi-supervised learning falls between supervised and unsupervised learning. It uses a small amount of labeled data and a large amount of unlabeled data for training. This can improve learning accuracy when obtaining a fully labeled dataset is expensive or time-consuming.
+Examples:
+
+    Image Classification: Using a small number of labeled images and a large number of unlabeled images to improve classification performance.
+    Text Classification: Enhancing a model’s performance by training on a small labeled text dataset combined with a large unlabeled text corpus.
+
+4. Reinforcement Learning
+
+In reinforcement learning, an agent learns to make decisions by performing actions in an environment to maximize some notion of cumulative reward. The agent receives feedback in the form of rewards or penalties based on the actions it performs.
+Examples:
+
+    Game Playing: Training agents to play games like chess, Go, or video games (e.g., AlphaGo, DeepMind's DQN).
+    Robotics: Enabling robots to learn tasks through trial and error, such as navigating a maze or performing complex maneuvers.
+    Autonomous Vehicles: Training self-driving cars to make driving decisions based on rewards for safe and efficient driving.
+
+5. Self-Supervised Learning
+
+Self-supervised learning is a type of unsupervised learning where the data itself provides the supervision. The model creates pseudo-labels from the data and learns to predict these labels.
+Examples:
+
+    Natural Language Processing (NLP): Models like GPT and BERT are pre-trained using tasks such as predicting the next word in a sentence or filling in blanks within a text.
+    Computer Vision: Models are trained to predict parts of images from other parts, such as predicting the color of an image from its grayscale version.
+
+Summary
+
+Each type of machine learning has its unique applications and benefits:
+
+    Supervised Learning: Best for problems where labeled data is available.
+    Unsupervised Learning: Useful for discovering hidden patterns or structures in data.
+    Semi-Supervised Learning: Effective when labeled data is scarce but unlabeled data is abundant.
+    Reinforcement Learning: Suitable for problems involving sequential decision making and dynamic environments.
+    Self-Supervised Learning: Bridges the gap between supervised and unsupervised learning by creating labels from the data itself.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Machine learning (ML) is a subset of artificial intelligence (AI) that allows systems to learn from data, identify patterns, and make decisions with minimal human intervention. There are several types of machine learning, each with its unique methods and applications. Here are the main types:
+1. Supervised Learning
+
+In supervised learning, the model is trained on labeled data. This means that the input data is paired with the correct output. The goal is for the model to learn to predict the output from the input data.
+Examples:
+
+    Classification: Predicting a discrete label.
+        Email Spam Detection: Classifying emails as spam or not spam.
+        Image Recognition: Identifying objects in images (e.g., recognizing handwritten digits).
+
+    Regression: Predicting a continuous value.
+        House Price Prediction: Estimating the price of a house based on its features (size, location, etc.).
+        Stock Price Prediction: Predicting future stock prices based on historical data.
+
+2. Unsupervised Learning
+
+In unsupervised learning, the model is trained on data without labeled responses. The system tries to learn the patterns and the structure from the data.
+Examples:
+
+    Clustering: Grouping data points into clusters based on their similarities.
+        Customer Segmentation: Grouping customers based on purchasing behavior.
+        Market Basket Analysis: Finding items that frequently occur together in transactions.
+
+    Dimensionality Reduction: Reducing the number of random variables under consideration.
+        Principal Component Analysis (PCA): Reducing the dimensionality of data for visualization or to improve model efficiency.
+        t-SNE: Visualizing high-dimensional data in a two- or three-dimensional space.
+
+3. Semi-Supervised Learning
+
+Semi-supervised learning falls between supervised and unsupervised learning. It uses a small amount of labeled data and a large amount of unlabeled data for training. This can improve learning accuracy when obtaining a fully labeled dataset is expensive or time-consuming.
+Examples:
+
+    Image Classification: Using a small number of labeled images and a large number of unlabeled images to improve classification performance.
+    Text Classification: Enhancing a model’s performance by training on a small labeled text dataset combined with a large unlabeled text corpus.
+
+4. Reinforcement Learning
+
+In reinforcement learning, an agent learns to make decisions by performing actions in an environment to maximize some notion of cumulative reward. The agent receives feedback in the form of rewards or penalties based on the actions it performs.
+Examples:
+
+    Game Playing: Training agents to play games like chess, Go, or video games (e.g., AlphaGo, DeepMind's DQN).
+    Robotics: Enabling robots to learn tasks through trial and error, such as navigating a maze or performing complex maneuvers.
+    Autonomous Vehicles: Training self-driving cars to make driving decisions based on rewards for safe and efficient driving.
+
+5. Self-Supervised Learning
+
+Self-supervised learning is a type of unsupervised learning where the data itself provides the supervision. The model creates pseudo-labels from the data and learns to predict these labels.
+Examples:
+
+    Natural Language Processing (NLP): Models like GPT and BERT are pre-trained using tasks such as predicting the next word in a sentence or filling in blanks within a text.
+    Computer Vision: Models are trained to predict parts of images from other parts, such as predicting the color of an image from its grayscale version.
+
+Summary
+
+Each type of machine learning has its unique applications and benefits:
+
+    Supervised Learning: Best for problems where labeled data is available.
+    Unsupervised Learning: Useful for discovering hidden patterns or structures in data.
+    Semi-Supervised Learning: Effective when labeled data is scarce but unlabeled data is abundant.
+    Reinforcement Learning: Suitable for problems involving sequential decision making and dynamic environments.
+    Self-Supervised Learning: Bridges the gap between supervised and unsupervised learning by creating labels from the data itself.
