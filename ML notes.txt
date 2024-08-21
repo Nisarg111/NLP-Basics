@@ -236,3 +236,128 @@ It is called Location invariant.
 7)Flattening means to convert all matrices into a single column vector. All matrices are appended one after another.
 8)This output is passed to Fully connected neural network.
 9) From input to flatting is called Feature Extraction, Then FCNN is called classification.
+
+
+
+Linearity vs non - linearity:
+
+In machine learning (ML), the concepts of linearity and non-linearity are essential for understanding how models learn from data and make predictions. Let’s dive deeper into these concepts and explore them with examples.
+1. Linearity in Machine Learning:
+
+In machine learning, a model is considered linear if the output is a linear combination of the input features. This means that the relationship between the input features and the output can be represented as a straight line (or hyperplane in higher dimensions).
+Linear Model Example:
+
+Consider a simple linear regression model:
+
+y=w1x1+w2x2+⋯+wnxn+by=w1​x1​+w2​x2​+⋯+wn​xn​+b
+
+Here:
+
+    yy is the predicted output.
+    x1,x2,…,xnx1​,x2​,…,xn​ are the input features.
+    w1,w2,…,wnw1​,w2​,…,wn​ are the weights or coefficients that the model learns during training.
+    bb is the bias term.
+
+Key Characteristics of Linear Models:
+
+    The output is a weighted sum of the inputs.
+    The model assumes a linear relationship between the inputs and the output.
+    The decision boundary (in classification) or the prediction function (in regression) is a straight line or hyperplane.
+
+Example: Predicting House Prices
+
+Suppose you want to predict the price of a house based on its size and number of bedrooms. A linear regression model might look like this:
+
+Price=50×Size+10000×Bedrooms+50000Price=50×Size+10000×Bedrooms+50000
+
+Here:
+
+    The coefficient 50 is the weight for the "Size" feature.
+    The coefficient 10000 is the weight for the "Bedrooms" feature.
+    The bias term 50000 represents the base price.
+
+This model assumes that the price increases linearly with the size and number of bedrooms. If the relationship between house size, number of bedrooms, and price is actually more complex, this linear model may not capture the true patterns in the data well.
+2. Non-Linearity in Machine Learning:
+
+A model is considered non-linear if the relationship between the input features and the output cannot be represented as a straight line or hyperplane. Non-linear models can capture more complex patterns in the data, which is crucial for tasks where the relationship between features and output is not linear.
+Non-Linear Model Example:
+
+A non-linear model might involve polynomial terms, interactions between features, or non-linear activation functions in neural networks.
+Example: Polynomial Regression
+
+Let’s extend the linear regression example by adding a non-linear term:
+
+y=w1x+w2x2+by=w1​x+w2​x2+b
+
+This is a polynomial regression model of degree 2. The addition of the x2x2 term makes the model non-linear.
+
+Key Characteristics of Non-Linear Models:
+
+    The output is not a simple weighted sum of the inputs.
+    The decision boundary or prediction function can be curved or more complex.
+    Non-linear models can capture interactions between features and handle more complex data patterns.
+
+Example: Predicting House Prices with Non-Linearity
+
+Let’s say the relationship between house size and price is quadratic. The model might look like:
+
+Price=30×Size+5×Size2+10000×Bedrooms+50000Price=30×Size+5×Size2+10000×Bedrooms+50000
+
+Here:
+
+    The 5×Size25×Size2 term introduces non-linearity, allowing the model to capture more complex relationships between house size and price.
+    This non-linear model can better fit situations where, for example, the price increases at a faster rate as the house size increases.
+
+3. Non-Linearity in Neural Networks:
+
+In neural networks, non-linearity is introduced by using non-linear activation functions like ReLU, sigmoid, or tanh. Without these non-linearities, no matter how many layers a neural network has, it would behave like a linear model, which limits its ability to learn complex patterns.
+Example: Neural Network with and without Non-Linearity
+
+Consider a simple neural network with one hidden layer. The output yy is calculated as:
+
+y=f(W2⋅f(W1⋅x+b1)+b2)y=f(W2​⋅f(W1​⋅x+b1​)+b2​)
+
+Where:
+
+    xx is the input vector.
+    W1W1​ and W2W2​ are weight matrices.
+    b1b1​ and b2b2​ are biases.
+    f(⋅)f(⋅) is a non-linear activation function like ReLU.
+
+Without Non-Linearity:
+
+If f(⋅)f(⋅) were a linear function (e.g., identity function), the network would collapse into a single linear layer, making it equivalent to a linear model:
+
+y=W′⋅x+b′y=W′⋅x+b′
+
+This would limit the network's ability to model complex relationships.
+
+With Non-Linearity:
+
+By using a non-linear function like ReLU:
+
+f(z)=max⁡(0,z)f(z)=max(0,z)
+
+The network can model complex functions. Each layer applies a non-linear transformation, allowing the network to capture intricate patterns and interactions in the data.
+Why Non-Linearity is Important in ML:
+
+    Capturing Complex Relationships:
+        Many real-world relationships between inputs and outputs are non-linear. For example, the effect of age on income, the relationship between temperature and ice cream sales, or the impact of multiple factors on disease diagnosis.
+        Non-linear models can better fit such complex relationships.
+
+    Decision Boundaries in Classification:
+        In classification tasks, linear models create straight-line (or hyperplane) decision boundaries, which might not be sufficient to separate classes in complex datasets. Non-linear models can create curved or irregular decision boundaries that better separate the classes.
+
+    Feature Interactions:
+        Non-linear models can capture interactions between features, where the effect of one feature depends on the value of another. For example, the impact of exercise on health might depend on age.
+
+    Versatility in Neural Networks:
+        Neural networks rely on non-linear activation functions to learn from data. Without these non-linearities, deep networks would lose their ability to model anything more than simple linear transformations.
+
+Summary:
+
+    Linear Models assume a straightforward, proportional relationship between inputs and outputs. They are easy to interpret and fast to train but might be too simplistic for complex tasks.
+
+    Non-Linear Models introduce complexity by allowing the model to capture intricate patterns, relationships, and interactions within the data. This makes them more powerful for a wide range of tasks, especially those where the true relationship between inputs and outputs is not linear.
+
+Understanding when to use linear versus non-linear models is key to building effective machine learning systems.
