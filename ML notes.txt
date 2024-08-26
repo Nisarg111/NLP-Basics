@@ -418,3 +418,4 @@ Use case of Dimensionality Reduction:
 PCA (Princial Component Analysis) Feature Extraction:
 
 It creates new axises ( Views ) which captures the spread and variance which is less than the original axis hence providing better feature.
+Here goal is to capture maximum variance
