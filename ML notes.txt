@@ -394,4 +394,4 @@ Then we calculate Silhoute score which is [a(i)-b(i)/[max[a(i),b(i)]
 Value of silhoute score is between -1 to 1.
 
 And more near to 1 better the clustering is.
-
+If equal to 0 then a(i) = b(i)
