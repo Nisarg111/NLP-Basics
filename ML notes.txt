@@ -361,3 +361,24 @@ Summary:
     Non-Linear Models introduce complexity by allowing the model to capture intricate patterns, relationships, and interactions within the data. This makes them more powerful for a wide range of tasks, especially those where the true relationship between inputs and outputs is not linear.
 
 Understanding when to use linear versus non-linear models is key to building effective machine learning systems.
+
+
+
+
+
+
+K Means Clustering:
+
+Here, we have to create a clusters for given data points. It is done by first randomly initializing k centroids and labeling the data points near to the centroid of their own type.
+After all data points are labelled, centroid position is changed to the mean pos of all data points of its type and this process is repeated.
+
+Problem with this is Random initializtion Trap, if two or more centroids are placed near to each other than cluster being formed is not correct.
+
+To overcome this we plot cenrtroids randomly in such a way that they are max far from each other.
+
+And way of k is determined by Elbow method in graph where K and WCSS(Within Cluster Sum of Squares)
+WCSS = Sum of i to n points from k
+
+We plot a graph using this k being on X axis and WCSS on the Y axis.
+As the k will increase and WCSS will decrease and at some point it will become flat and we get the point before the graphs get flatten
+
