@@ -380,5 +380,18 @@ And way of k is determined by Elbow method in graph where K and WCSS(Within Clus
 WCSS = Sum of i to n points from k
 
 We plot a graph using this k being on X axis and WCSS on the Y axis.
-As the k will increase and WCSS will decrease and at some point it will become flat and we get the point before the graphs get flatten
+As the k will increase and WCSS will decrease and at some point it will become flat and we get the point before the graphs get flatten.
+
+To verify our clusters we use Silhoute Score.
+
+Its calculation:
+
+We take a point i from a cluster and we calculate it average from the rest of the points in  the cluster it is done by summation of distance from all points and then dividing it with (Total number of points in cluster - 1) a(i)
+
+Then we take the same point and do the above steps with other nearest cluster.b(i)
+Then we calculate Silhoute score which is [a(i)-b(i)/[max[a(i),b(i)]
+
+Value of silhoute score is between -1 to 1.
+
+And more near to 1 better the clustering is.
 
