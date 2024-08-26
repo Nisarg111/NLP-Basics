@@ -395,3 +395,26 @@ Value of silhoute score is between -1 to 1.
 
 And more near to 1 better the clustering is.
 If equal to 0 then a(i) = b(i)
+
+
+
+
+Dimensionality Reduction:
+
+Curse of Dimensionality: It occurs when we overload the model with n number of features that the accuracy of the model becomes to degrade.
+
+To overcome Curse of Dimensionality we use Dimensionality reduction. This can be done in two ways:
+1) Feature Selection : Here we select and give features to model that are releavant and useful for the model and problem statement.
+2) Feature Extraction : Here we try to capture the data from multiple features to a single feature.
+
+Use case of Dimensionality Reduction:
+
+1) Easy to visualize data
+2) Improved model performance
+
+
+
+
+PCA (Princial Component Analysis) Feature Extraction:
+
+It creates new axises ( Views ) which captures the spread and variance which is less than the original axis hence providing better feature.
