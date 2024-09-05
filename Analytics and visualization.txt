@@ -1,0 +1,8 @@
+Zip function:
+
+it combines the items from two or more list or array and returns them
+example: A = [1, 2, 3] B = [4, 5, 6]
+
+for i,j in zip(A,B):
+  print(i , j) 
+#output 1 4, 2 5, 3 6
