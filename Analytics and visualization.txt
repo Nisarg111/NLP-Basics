@@ -6,3 +6,20 @@ example: A = [1, 2, 3] B = [4, 5, 6]
 for i,j in zip(A,B):
   print(i , j) 
 #output 1 4, 2 5, 3 6
+
+np.dot(a1,a2)
+performs elements wise multiplication and then adds them.
+
+np.matmal(a1, a2) / a1@a2
+does matrix multiplication
+
+np.concatinate() to concate to arrays
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+a = a[:,np.newaxis] # add new axis to the array
+b = b[:,np.newaxis]
+
+c = np.concatenate((a,b),axis=1)
+print(c)
