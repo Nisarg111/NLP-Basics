@@ -23,3 +23,14 @@ b = b[:,np.newaxis]
 
 c = np.concatenate((a,b),axis=1)
 print(c)
+
+
+Date and GroupBy
+data["Date_Time"] = pd.to_datetime(data['Date_Time'], format="mixed")
+data['Month'] = data["Date_Time"].dt.month
+d = data.groupby(['Month'])
+passengers = d.Passenger_Count.sum()
+
+Merge Two Data sets
+
+merge_df = data1.merge(d2,on="column_name")
