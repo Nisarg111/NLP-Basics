@@ -34,3 +34,66 @@ passengers = d.Passenger_Count.sum()
 Merge Two Data sets
 
 merge_df = data1.merge(d2,on="column_name")
+
+
+Line Chart:
+
+One of the simplest chart. It plots each data point and connect using line.
+Markers are used when we want to get the point in grapht where an element is plotted in the graph.
+Good For Linear Data.
+
+Seaborn is used to make graphs more visually appealing. We can sns.set_style to define a style.
+
+sns.set_style("dark")
+years = list(range(2000,2013))
+apple = list(map(lambda x: round(random.random(),2),years))
+orange = list(map(lambda x: round(random.random(),2),years))
+plt.plot(years,apple,'s-b') # Here 's-b' specifies the style s is for square which is Marker, - is for simple line, b is color blue for line
+plt.plot(years, orange,'o--r') # Similarly O is for Circle Marker, -- is dashed line, r is red color for line
+plt.xlabel("Year")
+plt.ylabel("Yield")
+plt.legend(["Apple","Orange"])
+plt.title("Crop's Yield")
+plt.figure(figsize=(12,6));
+
+
+Scatter Plot:
+
+Scatter plot is used when data in not linear and connecting the dots with line doesn't make sense.
+Hue is used to categorize or group by the data.
+In Seaborn, a popular Python visualization library, hue is used to group data by color, adding an extra dimension to plots. When you specify a hue parameter in a Seaborn plot, it divides the data into different categories and assigns a different color to each category.
+
+Example:
+
+tips = sns.load_dataset("tips")
+sns.scatterplot(x=tips.total_bill,y=tips.tip,hue=tips.sex)
+
+
+Histogram:
+
+Histogram is useful for visualizing the distribution of a single feature.
+Example:
+sns.histplot(tips.tip)
+
+Bar Plot:
+
+Bar plot is useful when we want to get the count for a particular category or time duration. 
+Example: how many apples sold this year.
+
+plt.bar(years,apple)
+plt.bar(years,orange,bottom=apple)# bottom is used while plotting multiple barplot in one, specifies which graph to plot at bottom.
+
+sns.barplot(x=tips.day,y=tips.total_bill) #shows average of each day
+
+HeatMap:
+
+HeatMap are used to visualize 2D data like matrices.
+To convert a dataset into matrix we can use pivot() method which takes 3 arguments index(Y axis), columns (X Axis), values
+
+Example:
+
+flights = sns.load_dataset('flights').pivot(index="month",columns="year",values="passengers")
+plt.figure(figsize=(12,8))
+sns.heatmap(flights,annot=True,fmt="d",cmap="Blues")
+
+
