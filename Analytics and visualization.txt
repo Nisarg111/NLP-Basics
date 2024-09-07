@@ -97,3 +97,34 @@ plt.figure(figsize=(12,8))
 sns.heatmap(flights,annot=True,fmt="d",cmap="Blues")
 
 
+EDA:
+
+
+
+To convert an DataSeries from String to Numeric:
+df['col_name'] = pd.to_numer(df.col_name, errors="coerce") #Coerse means if any non-numeric value is present will be converted to NaN
+
+To Delete Rows based on some conditional Data:
+For example Deleting rows were age < 10:
+df.drop(df[df.col_name < 10].index,inplace=True)
+
+To Convert Genders:
+1st way:
+df1.where(~(df1.Gender.str.contains(';',na=False)),np.nan,inplace=True)
+2nd way:
+gender_map = {
+    'M': 'Male', 
+    'Male': 'Male', 
+    'F': 'Female', 
+    'Female': 'Female',
+    'Non-binary': 'Other',
+    'Other': 'Other',
+    # You can add more mappings if needed
+}
+
+# Apply the mapping to the 'Gender' column
+df['Gender'] = df['Gender'].replace(gender_map)
+
+
+
+
