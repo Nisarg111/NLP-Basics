@@ -1,0 +1,33 @@
+Prompt Engineering:
+
+Prompt engineering is the process of designing and crafting input prompts to guide the behavior of AI models, especially generative models like GPT, to produce the desired output.
+
+ypes of Prompt Engineering:
+
+    Instruction-based Prompting:
+        This involves providing clear and explicit instructions in the prompt for the model to follow. The user tells the model exactly what to do, making it easier for the AI to understand the expected output. For example, “Summarize the following article in 3 bullet points” gives the model a specific task with clear guidelines.
+        Instruction-based prompting is useful for tasks like summarization, translation, and classification, where precision in the request leads to a more focused response.
+
+    Few-shot Prompting:
+        In few-shot prompting, the model is provided with a few examples in the prompt to guide it toward the desired output. This can help the model understand the pattern or format expected in the response.
+        This method is beneficial when the model needs guidance but there’s no large labeled dataset available for training. It allows for flexible learning on the go.
+
+    Zero-shot Prompting:
+        Zero-shot prompting means providing a query without any prior examples or instructions and expecting the model to infer the task. This relies on the model’s ability to generalize from its training.
+        For example, asking “What is the capital of France?” is a zero-shot prompt where the model must understand that it is supposed to provide a factual answer without explicit instructions or examples.
+        Zero-shot prompting is effective when the model’s training already includes knowledge about the query or task and when users want a simple and direct response.
+
+    Chain-of-Thought (CoT) Prompting:
+        Chain-of-thought prompting involves prompting the model to explain its reasoning process step-by-step. This method is especially useful for tasks requiring logical reasoning, multi-step problem solving, or decision-making.
+        Instead of asking for a direct answer, you would guide the model by requesting it to “think aloud” or explain its thought process. For example, “Explain how you arrived at the solution to this math problem.”
+        By making the model articulate its intermediate steps, the quality of complex problem-solving can improve, and users can better understand the AI’s reasoning.
+
+    Contextual Prompting:
+        In contextual prompting, the model is given additional context or background information alongside the query. This could be in the form of related text, data, or examples that help guide the model toward a more informed response.
+        For instance, when generating a summary for a specific article, providing the article's full text as context ensures that the model bases its output on relevant information.
+        Contextual prompting enhances the relevance of the output by ensuring the AI has access to the appropriate background material, particularly for applications like question-answering and summarization.
+
+    Conversational Prompting:
+        Conversational prompting is used in dialogue-based models where the AI engages in a multi-turn conversation with the user. Each prompt depends on the preceding exchanges, so the model maintains context and continuity across the dialogue.
+        This method is crucial for building chatbots, virtual assistants, or any applications that involve human-like conversational interactions.
+        The AI must be able to understand the context of the conversation, respond naturally, and remember key details from previous turns to provide coherent responses in the ongoing interaction.
